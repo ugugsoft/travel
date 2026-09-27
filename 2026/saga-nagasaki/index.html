@@ -5,624 +5,307 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>佐賀・長崎 2026 | Travel Log</title>
   <link rel="stylesheet" href="../../css/style.css">
-
-  <!-- Cloudflare Web Analytics -->
-  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0c024e4877604c50bf842f92238aa0e1"}'></script>
-  <!-- End Cloudflare Web Analytics --> 
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"0c024e4877604c50bf842f92238aa0e1"}'></script>
 </head>
 <body>
 <main>
   <header>
     <p><a href="../../index.html">← Travel Log</a></p>
     <h1>佐賀・長崎 2026</h1>
-    <p class="meta">2026/7/15（水）〜7/19（日）</p>
-    <div class="badges">
-      <span class="badge">♨️ 嬉野温泉</span>
-      <span class="badge">🏺 波佐見焼</span>
-      <span class="badge">🚄 西九州新幹線</span>
-      <span class="badge">🚋 長崎電気軌道</span>
-      <span class="badge">🌊 晴れたら高島</span>
-    </div>
+    <p class="meta">2026/7/15（水）〜7/19（日）｜旅行記</p>
+    <div class="badges"><span class="badge">♨️ 嬉野温泉</span><span class="badge">🏺 波佐見焼</span><span class="badge">🚄 西九州新幹線</span><span class="badge">🚋 長崎街歩き</span><span class="badge">🌊 高島海水浴場</span></div>
   </header>
 
   <section class="card">
-    <h2>旅のテーマ</h2>
-    <p>
-      リフレッシュ休暇。
-      初日は嬉野温泉で休み、2日目は波佐見焼を見てから長崎へ。
-      長崎では中華街周辺を拠点に、街歩き・ご当地朝食・海を楽しむ。
-    </p>
+    <h2>旅の記録</h2>
+    <p>リフレッシュ休暇。佐賀では嬉野温泉と波佐見を訪問し、西九州新幹線「かもめ」に初乗車。初訪問・初宿泊の長崎では、坂道、港、路面電車、眼鏡橋を歩き、海水浴と長崎の食を楽しんだ5日間。</p>
+    <div class="note"><strong>旅の達成</strong><br>九州全県での宿泊を達成。通過経験も含め、未訪問都道府県なし。</div>
   </section>
 
   <section class="card">
-    <h2>天気予報</h2>
-    <p class="meta">気象庁の府県天気予報を自動取得。予報が未配信の日は「予報待ち」と表示。</p>
-    <div id="weather-forecast" class="weather-grid" aria-live="polite">
-      <p class="meta">天気予報を読み込み中...</p>
-    </div>
-    <p class="meta">
-      公式サイト：
-      <a href="https://www.jma.go.jp/bosai/forecast/" target="_blank" rel="noopener">気象庁</a>
-      /
-      <a href="https://tenki.jp/forecast/9/45/8410/42201/" target="_blank" rel="noopener">tenki.jp 長崎市</a>
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>リンク集</h2>
-    <h3>旅行プラン</h3>
+    <h2>Googleマップ</h2>
     <div class="place-grid">
       <div class="place">
-        <h3>📍 Google マップ（Vacation2026）</h3>
-        <p>今回の旅行で行きたい場所をまとめた保存済みマップ。</p>
-        <div class="button-row">
-          <a class="button"
-            href="https://maps.app.goo.gl/TS4M3vgLeHnL2KsY6"
-            target="_blank"
-            rel="noopener">
-            Googleマップを開く
-          </a>
-        </div>
-      </div>
-    </div>
-    <h3>交通</h3>
-    <div class="place-grid">
-      <div class="place">
-        <h3>🚋 長崎電気軌道</h3>
-        <p>長崎市内の路面電車。新地中華街・大波止・長崎駅方面の移動に利用。</p>
-        <div class="button-row">
-          <a class="button" href="https://www.naga-den.com/" target="_blank" rel="noopener">公式サイト</a>
-        </div>
-      </div>
-
-      <div class="place">
-        <h3>🚌 長崎空港リムジンバス</h3>
-        <p>7/19、新地中華街から長崎空港へ移動予定。</p>
-        <div class="button-row">
-          <a class="button" href="https://nagasaki-airport.jp/access/bus/timetable/bus_nagasaki.php" target="_blank" rel="noopener">時刻表</a>
-        </div>
-      </div>
-
-      <div class="place">
-        <h3>🚢 高島航路</h3>
-        <p>7/18晴天時の候補。長崎港〜高島の時刻確認用。</p>
-        <div class="button-row">
-          <a class="button" href="https://www.nomo.co.jp/nomo/takasu-shunkan/" target="_blank" rel="noopener">時刻表</a>
-        </div>
-      </div>
-    </div>   
-    <h3>ホテル</h3>
-    <div class="place-grid">
-      <div class="place">
-        <img class="place-photo" src="images/hotel_sakuraureshino.jpg" alt="ホテル桜 嬉野" loading="lazy">
-        <h3>ホテル桜 嬉野</h3>
-        <p>7/15宿泊。夕朝食付き。開業3周年記念フェア。</p>
-        <div class="button-row">
-          <a class="button secondary" href="https://maps.google.com/?q=ホテル桜嬉野" target="_blank" rel="noopener">📍 Map</a>
-          <a class="button" href="https://hotel-sakura-ureshino.jp/" target="_blank" rel="noopener">公式サイト</a>
-        </div>
-      </div>
-
-      <div class="place">
-        <img class="place-photo" src="images/hotel_dormyinn.webp" alt="ドーミーイン長崎新地中華街" loading="lazy">
-        <h3>ドーミーイン長崎新地中華街</h3>
-        <p>7/16宿泊。朝食付き。大浴場、夜鳴きそば、ご当地朝食。</p>
-        <div class="button-row">
-          <a class="button secondary" href="https://maps.google.com/?q=ドーミーイン長崎新地中華街" target="_blank" rel="noopener">📍 Map</a>
-          <a class="button" href="https://dormy-hotels.com/dormyinn/hotels/nagasaki/" target="_blank" rel="noopener">公式サイト</a>
-        </div>
-      </div>
-
-      <div class="place">
-        <img class="place-photo" src="images/hotel_jalcity.jpg" alt="ホテルJALシティ長崎" loading="lazy">
-        <h3>ホテルJALシティ長崎</h3>
-        <p>7/17、7/18宿泊。中華街近く。</p>
-        <div class="button-row">
-          <a class="button secondary" href="https://maps.google.com/?q=ホテルJALシティ長崎" target="_blank" rel="noopener">📍 Map</a>
-          <a class="button" href="https://www.nagasaki.jalcity.co.jp/" target="_blank" rel="noopener">公式サイト</a>
-        </div>
-      </div>
-    </div>
-
-    <h3>飲食店</h3>
-    <div class="place-grid">
-      <div class="place">
-        <h3>ツル茶ん</h3>
-        <p>ミルクセーキ発祥。思案橋エリア。最有力候補。</p>
-        <div class="button-row">
-          <a class="button secondary" href="https://maps.google.com/?q=ツル茶ん 思案橋 長崎" target="_blank" rel="noopener">📍 Map</a>
-        </div>
-      </div>
-
-      <div class="place">
-        <h3>プリムローズ</h3>
-        <p>JALシティ徒歩圏の洋食店。評判良好。</p>
-        <div class="button-row">
-          <a class="button secondary" href="https://maps.google.com/?q=プリムローズ 長崎 洋食" target="_blank" rel="noopener">📍 Map</a>
-        </div>
-      </div>
-
-      <div class="place">
-        <h3>ニッキー・アースティン</h3>
-        <p>トルコライス有名店。ボリューム大きめ。</p>
-        <div class="button-row">
-          <a class="button secondary" href="https://maps.google.com/?q=ニッキー・アースティン 長崎" target="_blank" rel="noopener">📍 Map</a>
-        </div>
-      </div>
-
-      <div class="place">
-        <h3>多ら福 亜紗</h3>
-        <p>地魚と地酒。一人利用しやすい。</p>
-        <div class="button-row">
-          <a class="button secondary" href="https://maps.google.com/?q=多ら福 亜紗 長崎" target="_blank" rel="noopener">📍 Map</a>
-        </div>
-      </div>
-
-      <div class="place">
-        <h3>魚店亜紗</h3>
-        <p>長崎駅近く。刺しゃぶ、五島うどん。</p>
-        <div class="button-row">
-          <a class="button secondary" href="https://maps.google.com/?q=魚店亜紗 長崎駅" target="_blank" rel="noopener">📍 Map</a>
-        </div>
-      </div>
-    </div>
-    <h3>🎵 雨オトコ晴オンナの風景巡り</h3>
-    <div class="place-grid">
-
-      <div class="place">
-        <h3>オランダ坂</h3>
-        <p>で君を待って</p>
-        <div class="button-row">
-          <a class="button secondary"
-            href="https://maps.app.goo.gl/9q54Q5LG1oNxKEkQ6"
-            target="_blank"
-            rel="noopener">📍 Map</a>
-        </div>
-      </div>
-
-      <div class="place">
-        <h3>湊公園</h3>
-        <p>を横切って</p>
-        <div class="button-row">
-          <a class="button secondary"
-            href="https://maps.app.goo.gl/gqehDXj9ukMbLihd6"
-            target="_blank"
-            rel="noopener">📍 Map</a>
-        </div>
-      </div>
-      
-      <div class="place">
-        <h3>大波止</h3>
-        <p>へ向かう</p>
-        <div class="button-row">
-          <a class="button secondary"
-            href="https://maps.app.goo.gl/RYvBMghSid2KeqxD6"
-            target="_blank"
-            rel="noopener">📍 Map</a>
-        </div>
-      </div>
-
-      <div class="place">
-        <h3>出島ワーフ</h3>
-        <p>でお茶を飲んで</p>
-        <div class="button-row">
-          <a class="button secondary"
-            href="https://maps.app.goo.gl/61r1XfaHrvz4BZESA"
-            target="_blank"
-            rel="noopener">📍 Map</a>
-        </div>
-      </div>
-
-      <div class="place">
-        <h3>長崎港ターミナル</h3>
-        <p>の隅いちゃついて</p>
-        <div class="button-row">
-          <a class="button secondary"
-            href="https://maps.app.goo.gl/bQaiTqGjKXpVFZLV9"
-            target="_blank"
-            rel="noopener">📍 Map</a>
-        </div>
-      </div>
-
-    </div>
-
-    <h3>その他</h3>
-    <div class="place-grid">
-      <div class="place">
-        <img class="place-photo" src="images/other_nishiohara.png" alt="西の原" loading="lazy">
-        <h3>西の原</h3>
-        <p>波佐見焼、カフェ、古い製陶所跡の散策。</p>
-        <div class="button-row">
-          <a class="button secondary" href="https://maps.google.com/?q=西の原 波佐見" target="_blank" rel="noopener">📍 Map</a>
-          <a class="button" href="https://24nohara.jp/" target="_blank" rel="noopener">公式サイト</a>
-        </div>
-      </div>
-
-      <div class="place">
-        <img class="place-photo" src="images/other_hiroppa.jpg" alt="HIROPPA" loading="lazy">
-        <h3>HIROPPA</h3>
-        <p>マルヒロの公園・ショップ・カフェ。西の原から徒歩圏。</p>
-        <div class="button-row">
-          <a class="button secondary" href="https://maps.google.com/?q=HIROPPA 波佐見" target="_blank" rel="noopener">📍 Map</a>
-          <a class="button" href="https://hiroppa.hasamiyaki.jp/" target="_blank" rel="noopener">公式サイト</a>
-        </div>
-      </div>
-
-      <div class="place">
-        <img class="place-photo" src="images/other_takashima.jpg" alt="高島海水浴場" loading="lazy">
-        <h3>高島海水浴場</h3>
-        <p>晴れた日の候補。長崎港から船で行く離島のビーチ。</p>
-        <div class="button-row">
-          <a class="button secondary" href="https://maps.google.com/?q=高島海水浴場 長崎" target="_blank" rel="noopener">📍 Map</a>
-          <a class="button" href="https://www.nagasaki-tabinet.com/guide/398" target="_blank" rel="noopener">観光サイト</a>
-        </div>
-      </div>
-
-      <div class="place">
-      <h3>🛒 イオン長崎店</h3>
-      <p>新地中華街近く。五島うどん、あごだし、雲仙ハムなどのご当地食品探し。</p>
-      <div class="button-row">
-        <a class="button secondary"
-          href="https://maps.app.goo.gl/Yt1s3WPLeuimP9X48"
-          target="_blank"
-          rel="noopener">📍 Map</a>
+        <h3>Vacation2026</h3>
+        <p>旅行中に保存した場所の一覧。</p>
+        <div class="button-row"><a class="button" href="https://maps.app.goo.gl/TS4M3vgLeHnL2KsY6" target="_blank" rel="noopener">Vacation2026を開く</a></div>
       </div>
     </div>
   </section>
 
   <section class="card">
-    <h2>予約済み・決定済み</h2>
-    <table>
-      <tr><th>日付</th><th>内容</th><th>メモ</th></tr>
-      <tr>
-        <td>7/15（水）</td>
-        <td>新神戸 09:06 → 博多 11:26</td>
-        <td>スマートEX／山陽新幹線</td>
-      </tr>
-      <tr>
-        <td>7/15（水）</td>
-        <td>博多 12:54 → 嬉野温泉 14:03</td>
-        <td>リレーかもめ29号 → かもめ29号</td>
-      </tr>
-      <tr>
-        <td>7/15（水）</td>
-        <td><a href="https://hotel-sakura-ureshino.jp/" target="_blank" rel="noopener">ホテル桜 嬉野</a></td>
-        <td>夕朝食付き。開業3周年記念フェア：ふぐ、まぐろ寿司、嬉野抹茶スイーツなど。</td>
-      </tr>
-      <tr>
-        <td>7/16（木）</td>
-        <td>嬉野温泉 16:04 → 長崎 16:28</td>
-        <td>かもめ37号</td>
-      </tr>
-      <tr>
-        <td>7/16（木）</td>
-        <td><a href="https://dormy-hotels.com/dormyinn/hotels/nagasaki/" target="_blank" rel="noopener">ドーミーイン長崎新地中華街</a></td>
-        <td>朝食付き。皿うどん、ハトシ、中華粥、雲仙ハムなど。</td>
-      </tr>
-      <tr>
-        <td>7/17（金）</td>
-        <td><a href="https://www.nagasaki.jalcity.co.jp/" target="_blank" rel="noopener">JALシティ長崎</a></td>
-        <td>スタンダードシングル（朝食付き。アーリーチェックイン13時／レイトチェックアウト12時）</td>
-      </tr>
-      <tr>
-        <td>7/18（土）</td>
-        <td><a href="https://www.nagasaki.jalcity.co.jp/" target="_blank" rel="noopener">JALシティ長崎</a></td>
-        <td>スタンダードシングル（朝食なし）</td>
-      </tr>
-      <tr>
-        <td>7/19（日）</td>
-        <td>長崎 14:40 → 伊丹 15:55</td>
-        <td>JAL2376便</td>
-      </tr>              
-    </table>
+    <h2>旅程の概要</h2>
+    <table><thead><tr><th>日程</th><th>主な行程</th></tr></thead><tbody>
+      <tr><td>7/15</td><td>神戸 → 博多 → 嬉野温泉。西九州新幹線に初乗車</td></tr>
+      <tr><td>7/16</td><td>波佐見のやきもの公園・HIROPPA・西の原を散策。長崎へ移動</td></tr>
+      <tr><td>7/17</td><td>長崎市内街歩き。出島ワーフでトルコライス</td></tr>
+      <tr><td>7/18</td><td>船で高島へ。海水浴と長崎の魚介</td></tr>
+      <tr><td>7/19</td><td>眼鏡橋・ミルクセーキ・長崎空港。伊丹経由で神戸へ</td></tr>
+    </tbody></table>
   </section>
 
   <section class="card">
-    <h2>Day 1：7/15（水） 嬉野温泉へ</h2>
+    <h2>Day 1｜7/15（水） 神戸・博多・嬉野温泉</h2>
     <div class="timeline">
-      <p><span class="time">09:06</span> 新神戸 発</p>
-      <p><span class="time">11:26</span> 博多 着</p>
-      <p><span class="time">昼</span> 博多駅で軽めの昼食</p>
-      <p><span class="time">12:54</span> 博多 発（リレーかもめ29号）</p>
-      <p><span class="time">13:58</span> 武雄温泉 発（かもめ29号）</p>
-      <p><span class="time">14:03</span> 嬉野温泉 着</p>
-      <p><span class="time">14:30</span> ホテル桜 嬉野チェックイン</p>
-      <p><span class="time">夜</span> ホテル桜 嬉野泊</p>
+      <p><span class="time">朝</span> 新神戸駅で朝食。蒜山ジャージーラテ、トースト、サラダ、ラタトゥイユがけの卵、ハム</p>
+      <p><span class="time">09:06</span> 新神戸発。山陽新幹線「さくら747号」で博多へ。車内で長崎出身の歌手の曲を聴きながら、フィナンシェ食べる</p>
+      <p><span class="time">11:26</span> 博多着。KITTE博多へ</p>
+      <p><span class="time">昼</span> KITTE博多の喜水丸でごまさば・ごまだいの昼食。スターバックスでコーヒーを買う</p>
+      <p><span class="time">12:54</span> 博多発。特急リレーかもめ29号（787系）で武雄温泉へ</p>
+      <p><span class="time">13:58</span> 武雄温泉発。対面乗換で西九州新幹線かもめ29号へ</p>
+      <p><span class="time">14:03</span> 嬉野温泉着。ホテル桜 嬉野へ</p>
+      <p><span class="time">午後</span> ことぶき屋で日帰り温泉</p>
+      <p><span class="time">夜</span> 温泉と開業3周年記念フェアのビュッフェ</p>
+    </div>
+    <div class="place-grid">
+      <div class="place"><h3>西九州新幹線に初乗車</h3><p>武雄温泉から嬉野温泉まで約5分。リレーかもめからの対面乗換も、旅らしい印象的な体験。</p></div>
+      <div class="place"><h3>ホテル桜 嬉野</h3><p>和洋室、夕朝食付き。嬉野温泉で旅の始まりをゆっくり過ごす一泊。</p><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=ホテル桜嬉野" target="_blank" rel="noopener">地図を開く</a><a class="button" href="https://hotel-sakura-ureshino.jp/" target="_blank" rel="noopener">公式サイト</a></div></div>
+      <div class="place"><h3>喜水丸 KITTE博多店</h3><p>ごまさば・ごまだいの昼食。</p><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=喜水丸+KITTE博多店" target="_blank" rel="noopener">地図を開く</a><a class="button" href="https://www.kisuimaru.jp/" target="_blank" rel="noopener">公式サイト</a></div></div>
+    </div>
+    <h3>ホテル桜 嬉野</h3><div class="archive-postcard-grid archive-postcard-grid--dinner">
+      <figure><img src="images/actual/day1/web/hotel_sakuraureshino.jpg" alt="ホテル桜 嬉野" loading="lazy"><figcaption>嬉野温泉での一泊</figcaption></figure>
+    </div>
+    <h3>夕食ビュッフェ</h3>
+    <p>ふぐ薄造りを2皿、ふぐ皮系料理、ふぐライスコロッケ、ふぐあら入りしゃぶしゃぶ、まぐろ握り、刺身、ローストビーフ、焼き鯖、煮魚、天ぷら、嬉野おでん、だご汁、煮込みハンバーグ。嬉野茶プリン、抹茶アイス、抹茶あん団子、スイカ、パイナップルのデザート。飲み物は嬉野茶。</p>
+    <h3>写真</h3><div class="archive-postcard-grid">
+      <figure class="archive-postcard--portrait"><img src="images/actual/day1/web/breakfast_shinkobe.jpg" alt="新神戸での朝食" loading="lazy"><figcaption>新神戸での朝食</figcaption></figure>
+      <figure><img src="images/actual/day1/web/financier.jpg" alt="フィナンシェ" loading="lazy"><figcaption>フィナンシェ</figcaption></figure>
+      <figure><img src="images/actual/day1/web/kisuimaru.jpg" alt="喜水丸のごまさばとごまだい" loading="lazy"><figcaption>博多・喜水丸のごまさば・ごまたい定食</figcaption></figure>
+      <figure class="archive-postcard--portrait"><img src="images/actual/day1/web/starbucks.jpg" alt="スターバックス" loading="lazy"><figcaption>博多のスターバックス</figcaption></figure>
+      <figure><img src="images/actual/day1/web/ogi_yokan.jpg" alt="小城羊羹" loading="lazy"><figcaption>小城羊羹</figcaption></figure>
+      <figure class="archive-postcard--portrait"><img src="images/actual/day1/web/kotobukiya1.jpg" alt="ことぶき屋" loading="lazy"><figcaption>ことぶき屋</figcaption></figure>
+      <figure class="archive-postcard--portrait"><img src="images/actual/day1/web/kotobukiya2.jpg" alt="水曜日は日帰り温泉半額" loading="lazy"><figcaption>水曜日は日帰り温泉半額</figcaption></figure>
+      <figure><img src="images/actual/day1/web/relay_kamome.jpg" alt="リレーかもめ29号" loading="lazy"><figcaption>特急リレーかもめ29号</figcaption></figure>
+      <figure><img src="images/actual/day1/web/kamome.jpg" alt="西九州新幹線かもめ" loading="lazy"><figcaption>西九州新幹線かもめ29号</figcaption></figure>
+    </div>
+    <h3>夕食ビュッフェ</h3><div class="archive-postcard-grid archive-postcard-grid--dinner">
+      <figure><img src="images/actual/day1/web/dinner1.jpg" alt="ホテル桜嬉野の夕食ビュッフェの盛り合わせ" loading="lazy"><figcaption>ビュッフェ</figcaption></figure>
+      <figure><img src="images/actual/day1/web/dinner2.jpg" alt="ホテル桜嬉野のふぐしゃぶ" loading="lazy"><figcaption>ふぐしゃぶ</figcaption></figure>
+      <figure><img src="images/actual/day1/web/dinner3.jpg" alt="ホテル桜嬉野の嬉野おでん" loading="lazy"><figcaption>嬉野おでん</figcaption></figure>
+      <figure><img src="images/actual/day1/web/dinner4.jpg" alt="ホテル桜嬉野のだご汁と煮込みハンバーグ" loading="lazy"><figcaption>だご汁と煮込みハンバーグ</figcaption></figure>
+      <figure class="archive-postcard--tall"><img src="images/actual/day1/web/dinner5.jpg" alt="ホテル桜嬉野の嬉野茶デザート" loading="lazy"><figcaption>嬉野茶デザート</figcaption></figure>
     </div>
   </section>
 
   <section class="card">
-    <h2>Day 2：7/16（木） 波佐見焼と長崎入り</h2>
+    <h2>Day 2｜7/16（木） 波佐見・長崎</h2>
     <div class="timeline">
-      <p><span class="time">朝</span> ホテルで朝食。チェックアウト後、荷物をホテルに預ける。</p>
-      <p><span class="time">10:04</span> 嬉野 発（西肥バス）</p>
-      <p><span class="time">10:20</span> 西の原 着</p>
-      <p><span class="time">午前〜午後</span> 西の原、カフェ、HIROPPA周辺を散策。</p>
-      <p><span class="time">14:18</span> 西の原 発（西肥バス）</p>
-      <p><span class="time">14:34</span> 嬉野 着。ホテルで荷物回収。</p>
-      <p><span class="time">夕方</span> タクシーまたはバスで嬉野温泉駅へ。</p>
-      <p><span class="time">16:04</span> 嬉野温泉 発（かもめ37号）</p>
-      <p><span class="time">16:28</span> 長崎 着</p>
-      <p><span class="time">17:00</span> ドーミーイン長崎新地中華街 チェックイン</p>
-      <p><span class="time">夜</span> ドーミーイン長崎新地中華街泊</p>
+      <p><span class="time">朝</span> ホテル桜 嬉野で朝食。荷物を預け、西肥バスで波佐見へ</p>
+      <p><span class="time">午前</span> 西の原バス停着。開店前の店が多く、やきもの公園 → HIROPPA → 西の原へ順序変更</p>
+      <p><span class="time">昼</span> ハッチマンズでチーズバーガーとオレンジジュース</p>
+      <p><span class="time">午後</span> 西の原散策、monne legui mooksでバナナタルトとアイスコーヒー。内海バス停から嬉野へ</p>
+      <p><span class="time">16:04</span> 嬉野温泉発・かもめ37号</p><p><span class="time">16:28</span> 長崎着。ドーミーイン長崎新地中華街へ</p>
+      <p><span class="time">夜</span> バラモン食堂で水イカ刺身・五島じゃがじゃが。夜鳴きそば</p>
+    </div>
+    <div class="place-grid">
+      <div class="place"><h3>波佐見焼</h3><p>陶芸の館で白くま柄の豆皿と箸置きを、Cheer houseで菊柄の豆皿を購入。</p></div>
+      <div class="place"><h3>波佐見の散策</h3><p>やきもの公園、HIROPPA、西の原を巡回。陶器だけでなく、店・カフェ・空間そのものを楽しんだ一日。</p></div>
+      <div class="place"><h3>初めての長崎県宿泊</h3><p>ドーミーイン長崎新地中華街泊。夜鳴きそばは旅の夜食にちょうどよいハーフサイズ。</p></div>
+    </div>
+    <h3>リンク</h3>
+    <div class="place-grid">
+      <div class="place"><h3>HIROPPA・西の原</h3><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=HIROPPA+波佐見" target="_blank" rel="noopener">HIROPPAの地図</a><a class="button" href="https://hiroppa.hasamiyaki.jp/" target="_blank" rel="noopener">HIROPPA公式</a><a class="button secondary" href="https://maps.google.com/?q=西の原+波佐見" target="_blank" rel="noopener">西の原の地図</a><a class="button" href="https://24nohara.jp/" target="_blank" rel="noopener">西の原公式</a></div></div>
+      <div class="place"><h3>ハッチマンズ</h3><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=ハッチマンズ+波佐見" target="_blank" rel="noopener">地図を開く</a></div></div>
+      <div class="place"><h3>monne legui mooks</h3><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=monne+legui+mooks+波佐見" target="_blank" rel="noopener">地図を開く</a><a class="button" href="https://mooks.jp/" target="_blank" rel="noopener">公式サイト</a></div></div>
+      <div class="place"><h3>ドーミーイン長崎新地中華街</h3><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=ドーミーイン長崎新地中華街" target="_blank" rel="noopener">地図を開く</a><a class="button" href="https://dormy-hotels.com/dormyinn/hotels/nagasaki/" target="_blank" rel="noopener">公式サイト</a></div></div>
+      <div class="place"><h3>バラモン食堂</h3><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=バラモン食堂+長崎" target="_blank" rel="noopener">地図を開く</a><a class="button" href="https://page.line.me/lfo9563t" target="_blank" rel="noopener">公式LINE</a></div></div>
+    </div>
+    <h3>ホテル桜 嬉野の朝食</h3><div class="archive-postcard-grid archive-postcard-grid--dinner">
+      <figure><img src="images/actual/day2/web/breakfast1.jpg" alt="ホテル桜嬉野の朝食" loading="lazy"><figcaption>その1</figcaption></figure>
+      <figure class="archive-postcard--portrait"><img src="images/actual/day2/web/breakfast2.jpg" alt="ホテル桜嬉野の朝食" loading="lazy"><figcaption>その2</figcaption></figure>
+      <figure><img src="images/actual/day2/web/breakfast3.jpg" alt="ホテル桜嬉野の朝食" loading="lazy"><figcaption>デザート</figcaption></figure>
+    </div>
+    <h3>写真</h3><div class="archive-postcard-grid">
+      <figure class="archive-postcard--portrait"><img src="images/actual/day2/web/yakimono_park.jpg" alt="波佐見やきもの公園" loading="lazy"><figcaption>波佐見・やきもの公園</figcaption></figure>
+      <figure><img src="images/actual/day2/web/hasami_pottery.jpg" alt="購入した波佐見焼" loading="lazy"><figcaption>購入した豆皿と箸置き</figcaption></figure>
+      <figure><img src="images/actual/day2/web/banana_tart.jpg" alt="monne legui mooksでバナナタルト" loading="lazy"><figcaption>monne legui mooksでバナナタルト</figcaption></figure>
+      <figure><img src="images/actual/day2/web/hikicha_monaka.jpg" alt="ひき茶もなか" loading="lazy"><figcaption>ひき茶もなか</figcaption></figure>
+      <figure><img src="images/actual/day2/web/yonaki_soba.jpg" alt="ドーミーインの夜鳴きそば" loading="lazy"><figcaption>ドーミーインの夜鳴きそば</figcaption></figure>
+    </div>
+    <h3>ハッチマンズ</h3><div class="archive-postcard-grid archive-postcard-grid--dinner">
+      <figure><img src="images/actual/day2/web/hatchmans1.jpg" alt="ハッチマンズのチーズバーガー" loading="lazy"><figcaption>チーズバーガー</figcaption></figure>
+      <figure class="archive-postcard--portrait"><img src="images/actual/day2/web/hatchmans2.jpg" alt="看板" loading="lazy"><figcaption>看板</figcaption></figure>
+    </div>
+    <h3>バラモン食堂</h3><div class="archive-postcard-grid archive-postcard-grid--dinner">
+      <figure><img src="images/actual/day2/web/baramon_ika.jpg" alt="バラモン食堂の水イカ刺身" loading="lazy"><figcaption>水イカ刺身</figcaption></figure>
+      <figure><img src="images/actual/day2/web/baramon_goto_jagajaga.jpg" alt="バラモン食堂の五島じゃがじゃが" loading="lazy"><figcaption>五島じゃがじゃが</figcaption></figure>
+      <figure class="archive-postcard--portrait"><img src="images/actual/day2/web/baramon_sauce.jpg" alt="バラモン食堂のソース" loading="lazy"><figcaption>ソース</figcaption></figure>
     </div>
   </section>
 
   <section class="card">
-    <h2>Day 3：7/17（金） 長崎：街歩き</h2>
+    <h2>Day 3｜7/17（金） 長崎市内街歩き</h2>
     <div class="timeline">
-      <p><span class="time">朝</span> ドーミーインのご当地朝食。チェックアウト後、荷物をホテルに預ける。</p>
-      <p><span class="time">午前〜午後</span> 未定：市内散策・喫茶店・トルコライス候補。</p>
-      <p><span class="time">13:00</span> JALシティ長崎 チェックイン</p>
-      <p><span class="time">夕方</span> </p>
-      <p><span class="time">夜</span> JALシティ長崎泊（スタンダードシングル）</p>
+      <p><span class="time">朝</span> 朝風呂とドーミーインの朝食ビュッフェ。皿うどん、ハトシ、雲仙ハム、角煮など</p>
+      <p><span class="time">午前</span> ホテルJALシティ長崎へ荷物を預け、オランダ坂、湊公園、新地中華街、大波止、長崎港を街歩き</p>
+      <p><span class="time">昼</span> 出島ワーフのATTICでデリシャストルコライスとアイスコーヒー</p>
+      <p><span class="time">夜</span> ASA DININGSで平政刺身、大きなかんぼこ揚げ、山芋とろろ磯辺揚げ、ノンアル梅酒</p>
+    </div>
+    <p>坂、港、路面電車、中華街が近接する長崎の街の個性を体感。「長崎の歌に出てくる場所」を意識した街歩き。</p>
+    <h3>リンク</h3>
+    <div class="place-grid">
+      <div class="place"><h3>ホテルJALシティ長崎</h3><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=ホテルJALシティ長崎" target="_blank" rel="noopener">地図を開く</a><a class="button" href="https://www.nagasaki.jalcity.co.jp/" target="_blank" rel="noopener">公式サイト</a></div></div>
+      <div class="place"><h3>ATTIC 出島ワーフ店</h3><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=ATTIC+出島ワーフ店" target="_blank" rel="noopener">地図を開く</a></div></div>
+      <div class="place"><h3>岩崎本舗 長崎本店</h3><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=岩崎本舗+長崎本店" target="_blank" rel="noopener">地図を開く</a></div></div>
+      <div class="place"><h3>ASA DININGS</h3><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=ASA+DININGS+長崎" target="_blank" rel="noopener">地図を開く</a></div></div>
+      <div class="place"><h3>長崎電気軌道</h3><div class="button-row"><a class="button" href="https://www.naga-den.com/" target="_blank" rel="noopener">公式サイト</a></div></div>
+    </div>
+    <h3>雨オトコ晴オンナの風景巡り</h3>
+    <div class="place-grid">
+      <div class="place"><h3>オランダ坂</h3><div class="place-photo-grid"><img class="place-photo" src="images/actual/day3/web/song_dutch_slope1.jpg" alt="オランダ坂の標識" loading="lazy"><img class="place-photo" src="images/actual/day3/web/song_dutch_slope2_blur.jpg" alt="オランダ坂で撮影した写真" loading="lazy"></div><p>で君を待って</p><div class="button-row"><a class="button secondary" href="https://maps.app.goo.gl/9q54Q5LG1oNxKEkQ6" target="_blank" rel="noopener">Map</a></div></div>
+      <div class="place"><h3>湊公園</h3><img class="place-photo" src="images/actual/day3/web/song_minato_park_blur.jpg" alt="湊公園" loading="lazy"><p>を横切って</p><div class="button-row"><a class="button secondary" href="https://maps.app.goo.gl/gqehDXj9ukMbLihd6" target="_blank" rel="noopener">Map</a></div></div>
+      <div class="place"><h3>大波止</h3><img class="place-photo" src="images/actual/day3/web/song_ohato_blur.jpg" alt="大波止" loading="lazy"><p>へ向かう</p><div class="button-row"><a class="button secondary" href="https://maps.app.goo.gl/RYvBMghSid2KeqxD6" target="_blank" rel="noopener">Map</a></div></div>
+      <div class="place"><h3>出島ワーフ</h3><img class="place-photo" src="images/actual/day3/web/song_dejima_wharf.jpg" alt="出島ワーフ" loading="lazy"><p>でお茶を飲んで</p><div class="button-row"><a class="button secondary" href="https://maps.app.goo.gl/61r1XfaHrvz4BZESA" target="_blank" rel="noopener">Map</a></div></div>
+      <div class="place"><h3>長崎港ターミナル</h3><img class="place-photo" src="images/actual/day3/web/song_nagasaki_port_terminal_blur.jpg" alt="長崎港ターミナル" loading="lazy"><p>の隅いちゃついて</p><div class="button-row"><a class="button secondary" href="https://maps.app.goo.gl/bQaiTqGjKXpVFZLV9" target="_blank" rel="noopener">Map</a></div></div>
+    </div>
+    <h3>写真</h3><div class="archive-postcard-grid">
+      <figure><img src="images/actual/day3/web/breakfast1.jpg" alt="ドーミーインの長崎ご当地朝食" loading="lazy"><figcaption>ドーミーインの長崎ご当地朝食</figcaption></figure>
+      <figure><img src="images/actual/day3/web/breakfast2.jpg" alt="ドーミーインの朝食ビュッフェ" loading="lazy"><figcaption>デザート</figcaption></figure>
+      <figure><img src="images/actual/day3/web/starbucks.jpg" alt="スターバックス" loading="lazy"><figcaption>ゆめタウンのスターバックス</figcaption></figure>
+      <figure><img src="images/actual/day3/attic_turkey_rice.jpg" alt="ATTICのトルコライス" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>ATTICのトルコライス</figcaption></figure>
+      <figure><img src="images/actual/day3/web/kakuniman.jpg" alt="角煮まん" loading="lazy"><figcaption>岩崎本舗の角煮まん</figcaption></figure>
+      <figure><img src="images/actual/day3/tram.jpg" alt="長崎電気軌道" loading="lazy" onerror="this.closest('figure').hidden=true"><figcaption>長崎電気軌道</figcaption></figure>
+    </div>
+    <h3>ASA DININGS</h3><div class="archive-postcard-grid archive-postcard-grid--dinner">
+      <figure class="archive-postcard--portrait"><img src="images/actual/day3/web/asa_dinings1.jpg" alt="ASA DININGSのお通し" loading="lazy"><figcaption>お通し</figcaption></figure>
+      <figure class="archive-postcard--portrait"><img src="images/actual/day3/web/asa_dinings2.jpg" alt="ASA DININGSのノンアル梅酒" loading="lazy"><figcaption>ノンアル梅酒</figcaption></figure>
+      <figure><img src="images/actual/day3/web/asa_dinings3.jpg" alt="ASA DININGSの平政刺身" loading="lazy"><figcaption>平政刺身</figcaption></figure>
+      <figure><img src="images/actual/day3/web/asa_dinings4.jpg" alt="ASA DININGSのかんぼこ揚げ" loading="lazy"><figcaption>大きなかんぼこ揚げ</figcaption></figure>
+      <figure><img src="images/actual/day3/web/asa_dinings5.jpg" alt="ASA DININGSの山芋とろろ磯辺揚げ" loading="lazy"><figcaption>山芋とろろ磯辺揚げ</figcaption></figure>
     </div>
   </section>
 
   <section class="card">
-    <h2>Day 4：7/18（土） 長崎：海</h2>
-    <h3>晴れプラン</h3>
-    <ul>
-      <li>高島海水浴場</li>
-      <li>フェリー：長崎 8:50発 → 高島 9:24着、高島 15:00発 → 長崎 15:36着（<a href="https://www.nomo.co.jp/nomo/takasu-shunkan/" target="_blank" rel="noopener">時刻表</a>）</li>
-      <li>伊王島</li>
-      <li>港周辺散歩</li>
-    </ul>
-
-    <h3>雨プラン</h3>
-    <ul>
-      <li>出島</li>
-      <li>長崎県美術館</li>
-      <li>喫茶店・カフェ巡り</li>
-    </ul>    
+    <h2>Day 4｜7/18（土） 高島海水浴場</h2>
     <div class="timeline">
-      <p><span class="time">朝</span> JALシティ長崎で朝食。</p>
-      <p><span class="time">午前〜午後</span> </p>
-      <p><span class="time">夕方</span> </p>
-      <p><span class="time">夜</span> JALシティ長崎泊（スタンダードシングル）</p>
+      <p><span class="time">08:50</span> 長崎港発。俊寛で高島へ、伊王島を経由</p>
+      <p><span class="time">09:24</span> 高島着。高島海水浴場へ</p>
+      <p><span class="time">日中</span> 高島海水浴場。持参したおにぎり、お茶、冷凍アクエリアス、ルイボスティーで休憩</p>
+      <p><span class="time">おやつ</span> 海水浴パックの券でブルーハワイのかき氷</p>
+      <p><span class="time">15:00</span> 鷹巣で高島発。長崎市内へ</p>
+      <p><span class="time">15:36</span> 長崎港着</p>
+      <p><span class="time">夜</span> ホテルで梅月堂のシースクリームとネスプレッソ。若竹丸で夕食</p>
+    </div>
+    <div class="place-grid"><div class="place"><h3>夏の高島</h3><p>海側の利用者は20人前後。キャンプやBBQ客の姿もあり、日焼けするほど長い時間を過ごした海水浴。</p></div><div class="place"><h3>若竹丸</h3><p>長崎鮮魚3点盛り、くじら二種、石垣貝、甲イカ、生水ダコ、山芋巻き、炙り海老、島原ハムカツ。21組待ちの後の夕食。</p></div></div>
+    <h3>リンク</h3>
+    <div class="place-grid">
+      <div class="place"><h3>高島海水浴場</h3><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=高島海水浴場+長崎" target="_blank" rel="noopener">地図を開く</a><a class="button" href="https://www.nagasaki-tabinet.com/guide/398" target="_blank" rel="noopener">公式サイト</a></div></div>
+      <div class="place"><h3>高島航路</h3><div class="button-row"><a class="button" href="https://www.nomo.co.jp/nomo/takasu-shunkan/" target="_blank" rel="noopener">公式サイト</a></div></div>
+      <div class="place"><h3>若竹丸</h3><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=若竹丸+長崎" target="_blank" rel="noopener">地図を開く</a></div></div>
+    </div>
+    <h3>JALシティ長崎の朝食</h3><div class="archive-postcard-grid archive-postcard-grid--dinner">
+      <figure><img src="images/actual/day4/web/breakfast1.jpg" alt="JALシティ長崎の朝食ビュッフェ" loading="lazy"><figcaption>ビュッフェ</figcaption></figure>
+      <figure><img src="images/actual/day4/web/breakfast2.jpg" alt="JALシティ長崎の朝食デザート" loading="lazy"><figcaption>デザート</figcaption></figure>
+    </div>
+    <h3>写真</h3><div class="archive-postcard-grid">
+      <figure><img src="images/actual/day4/web/ferry.jpg" alt="俊寛で高島" loading="lazy"><figcaption>俊寛で高島へ</figcaption></figure>
+      <figure><img src="images/actual/day4/web/takashima_beach.jpg" alt="高島海水浴場" loading="lazy"><figcaption>高島海水浴場</figcaption></figure>
+      <figure><img src="images/actual/day4/web/lunch.jpg" alt="九州産辛子高菜おにぎり" loading="lazy"><figcaption>九州産辛子高菜おにぎり</figcaption></figure>
+      <figure class="archive-postcard--trimmed-portrait"><img src="images/actual/day4/web/shaved_ice.jpg" alt="ブルーハワイ" loading="lazy"><figcaption>ブルーハワイ</figcaption></figure>
+      <figure><img src="images/actual/day4/web/takasu.jpg" alt="高島から長崎へ戻る鷹巣" loading="lazy"><figcaption>高島からの帰りは鷹巣</figcaption></figure>
+      <figure><img src="images/actual/day4/web/sheath_cream.jpg" alt="梅月堂のシースクリーム" loading="lazy"><figcaption>梅月堂のシースクリーム</figcaption></figure>
+    </div>
+    <h3>若竹丸</h3><div class="archive-postcard-grid archive-postcard-grid--dinner">
+      <figure><img src="images/actual/day4/web/wakatakemaru1.jpg" alt="若竹丸の握りずし" loading="lazy"><figcaption>握りずし</figcaption></figure>
+      <figure><img src="images/actual/day4/web/wakatakemaru2.jpg" alt="若竹丸の巻きずし" loading="lazy"><figcaption>巻きずし</figcaption></figure>
+      <figure class="archive-postcard--wide"><img src="images/actual/day4/web/wakatakemaru3.jpg" alt="若竹丸の炙りえび" loading="lazy"><figcaption>炙りえび</figcaption></figure>
+      <figure><img src="images/actual/day4/web/wakatakemaru4.jpg" alt="若竹丸の長崎の魚介" loading="lazy"><figcaption>長崎の魚介</figcaption></figure>
+      <figure><img src="images/actual/day4/web/wakatakemaru5.jpg" alt="若竹丸の島原ハムカツ" loading="lazy"><figcaption>島原ハムカツ</figcaption></figure>
     </div>
   </section>
+
   <section class="card">
-    <h2>Day 5：7/19（日） 長崎：最終日</h2>
+    <h2>Day 5｜7/19（日） 長崎・長崎空港・神戸</h2>
     <div class="timeline">
-      <p><span class="time">朝</span> ホテル付近のカフェなどで朝食。</p>
-      <p><span class="time">午前</span> 新地中華街・出島・眼鏡橋周辺を散策。</p>
-      <p><span class="time">12:00</span> JALシティ長崎 チェックアウト。</p>
-      <p><span class="time">12:10頃</span> 新地中華街から空港リムジンバス。</p>
-      <p><span class="time">13:00頃</span> 長崎空港到着。ランチ・展望デッキ・お土産。</p>
-      <p><span class="time">14:40</span> 長崎 発（JAL2376便）</p>
-      <p><span class="time">15:55</span> 伊丹 着</p>
+      <p><span class="time">朝</span> Seattle's Best Coffeeでチーズタコスドッグとアイスコーヒー</p>
+      <p><span class="time">午前</span> 眼鏡橋へ。ハートストーンを発見。蒸し暑い朝の川沿い散策</p>
+      <p><span class="time">午前</span> 喫茶セヴィリヤで長崎式ミルクセーキ。ほうじ茶と小菓子付き</p>
+      <p><span class="time">12:00</span> ホテルJALシティ長崎をチェックアウト</p>
+      <p><span class="time">12:10頃</span> 新地中華街付近から空港リムジンバス。遅延はあったものの、座って長崎空港へ</p>
+      <p><span class="time">13:00頃</span> 長崎空港着。五島うどん、スターバックスのコールドブリュー、カードラウンジ「アザレア」初利用</p>
+      <p><span class="time">14:40</span> 長崎発。JAL2376便</p><p><span class="time">15:55</span> 伊丹着。神戸へ帰宅</p>
+    </div>
+    <p>ミルクセーキは、スプーンで食べるシャリシャリしたデザートに近い長崎式。旅の最後まで五島うどんなどの長崎らしい食を楽しんだ。</p>
+    <h3>リンク</h3>
+    <div class="place-grid">
+      <div class="place"><h3>Seattle's Best Coffee</h3><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=Seattle%27s+Best+Coffee+長崎" target="_blank" rel="noopener">地図を開く</a></div></div>
+      <div class="place"><h3>喫茶セヴィリヤ</h3><div class="button-row"><a class="button secondary" href="https://maps.google.com/?q=喫茶セヴィリヤ+長崎" target="_blank" rel="noopener">地図を開く</a></div></div>
+      <div class="place"><h3>空港リムジンバス</h3><div class="button-row"><a class="button" href="https://nagasaki-airport.jp/access/bus/timetable/bus_nagasaki.php" target="_blank" rel="noopener">公式サイト</a></div></div>
+    </div>
+    <h3>写真</h3><div class="archive-postcard-grid">
+      <figure><img src="images/actual/day5/web/seattles_best_coffee.jpg" alt="Seattle's Best Coffeeのチーズタコスドッグ" loading="lazy"><figcaption>Seattle's Best Coffeeのチーズタコスドッグ</figcaption></figure>
+      <figure><img src="images/actual/day5/web/megane_bridge.jpg" alt="眼鏡橋" loading="lazy"><figcaption>眼鏡橋</figcaption></figure>
+      <figure class="archive-postcard--portrait"><img src="images/actual/day5/web/heart_stone.jpg" alt="眼鏡橋のハートストーン" loading="lazy"><figcaption>眼鏡橋のハートストーン</figcaption></figure>
+      <figure class="archive-postcard--portrait"><img src="images/actual/day5/web/sevilla_milkshake.jpg" alt="喫茶セヴィリヤのミルクセーキ" loading="lazy"><figcaption>喫茶セヴィリヤのミルクセーキ</figcaption></figure>
+      <figure class="archive-postcard--portrait"><img src="images/actual/day5/web/sevilla_hojicha.jpg" alt="喫茶セヴィリヤのほうじ茶と小菓子" loading="lazy"><figcaption>ほうじ茶と小菓子</figcaption></figure>
+      <figure><img src="images/actual/day5/web/goto_udon.jpg" alt="長崎空港の五島うどん" loading="lazy"><figcaption>旅の最後は長崎空港で五島うどん</figcaption></figure>
+      <figure class="archive-postcard--portrait"><img src="images/actual/day5/web/starbucks.jpg" alt="長崎空港のスターバックス" loading="lazy"><figcaption>長崎空港のスタバでコールドブリュー</figcaption></figure>
+      <figure><img src="images/actual/day5/web/nagasaki_airport.jpg" alt="長崎空港" loading="lazy"><figcaption>長崎空港から帰路へ</figcaption></figure>
     </div>
   </section>
 
   <section class="card">
-    <h2>食べたいものメモ</h2>
-    <h3>麺類</h3>
-    <div class="food-grid">
-      <div class="food-item">
-        <img src="images/food_gotoudon.jpg" alt="五島うどん" loading="lazy">
-        <span>五島うどん</span>
-      </div>
-      <div class="food-item">
-        <img src="images/food_saraudon.jpg" alt="皿うどん" loading="lazy">
-        <span>皿うどん</span>
-      </div>
-      <div class="food-item">
-        <img src="images/food_chanpon.jpg" alt="ちゃんぽん" loading="lazy">
-        <span>ちゃんぽん</span>
-      </div>
-    </div>
-
-    <h3>ご当地料理・おかず</h3>
-    <div class="food-grid">
-      <div class="food-item">
-        <img src="images/food_onsenyudofu.jpg" alt="温泉湯豆腐" loading="lazy">
-        <span>温泉湯豆腐</span>
-      </div>
-      <div class="food-item">
-        <img src="images/food_torukoraisu.jpg" alt="トルコライス" loading="lazy">
-        <span>トルコライス</span>
-      </div>
-      <div class="food-item">
-        <img src="images/food_hatoshi.jpg" alt="ハトシ" loading="lazy">
-        <span>ハトシ</span>
-      </div>
-      <div class="food-item">
-        <img src="images/food_unzenham.png" alt="雲仙ハム" loading="lazy">
-        <span>雲仙ハム</span>
-      </div>
-      <div class="food-item">
-        <img src="images/food_kakuniman.jpg" alt="角煮まん" loading="lazy">
-        <span>角煮まん</span>
-      </div>
-      <div class="food-item">
-        <img src="images/food_chukagayu.webp" alt="中華粥" loading="lazy">
-        <span>中華粥</span>
-      </div>
-    </div>
-
-    <h3>デザート</h3>
-    <div class="food-grid">
-      <div class="food-item">
-        <img src="images/food_mirukuseki.jpg" alt="ミルクセーキ" loading="lazy">
-        <span>ミルクセーキ</span>
-      </div>
-      <div class="food-item">
-        <img src="images/food_kasutera.jpg" alt="カステラ" loading="lazy">
-        <span>カステラ</span>
-      </div>
-      <div class="food-item">
-        <img src="images/food_sheathcream.webp" alt="シースクリーム" loading="lazy">
-        <span>シースクリーム</span>
-      </div>
-      <div class="food-item">
-        <img src="images/food_yoriyori.png" alt="よりより" loading="lazy">
-        <span>よりより</span>
-      </div>
+    <h2>買ったもの</h2>
+    <div class="place-grid">
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/hasami_bear_plate.jpg" alt="白くま柄の豆皿" loading="lazy"><h3>白くま柄の豆皿</h3><p>陶芸の館で購入。</p></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/hasami_bear_chopstic_rest.jpg" alt="白くまの箸置き" loading="lazy"><h3>白くまの箸置き</h3><p>陶芸の館で購入。</p></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/hasami_chrysanthemum_plate.jpg" alt="菊柄の豆皿" loading="lazy"><h3>菊柄の豆皿</h3><p>Cheer houseで購入。</p></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/suzakiya_gosan_yaki.jpg" alt="須崎屋の五三焼" loading="lazy"><h3>須崎屋 五三焼</h3></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/kinkaido_shichisan_yaki.jpg" alt="琴海堂の七三焼" loading="lazy"><h3>琴海堂 七三焼</h3></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/izumiya_gosan_yaki.jpg" alt="和泉屋の五三焼" loading="lazy"><h3>和泉屋 五三焼</h3></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/shooken_gosan_yaki.jpg" alt="松翁軒の五三焼" loading="lazy"><h3>松翁軒 五三焼</h3></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/fukken_yoriyori.jpg" alt="福建のよりより" loading="lazy"><h3>福建 よりより</h3></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/soshurin_mafaru.jpg" alt="蘇州林のマファール" loading="lazy"><h3>蘇州林 マファール</h3></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/goto_udon.jpg" alt="五島うどん" loading="lazy"><h3>五島うどん</h3></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/chanpon_senbei.jpg" alt="ちゃんぽんせんべい" loading="lazy"><h3>ちゃんぽんせんべい</h3></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/asparagus_biscuits.jpg" alt="アスパラガスビスケット" loading="lazy"><h3>アスパラガスビスケット</h3></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/donuts_bou.jpg" alt="ドーナツ棒" loading="lazy"><h3>ドーナツ棒</h3></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/kasumaki.jpg" alt="加寿まき" loading="lazy"><h3>加寿まき</h3></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/unimame.jpg" alt="うに豆" loading="lazy"><h3>うに豆</h3></div>
+      <div class="place"><img class="place-photo purchase-photo" src="images/actual/purchases/web/zabonzuke.jpg" alt="ざぼん漬" loading="lazy"><h3>ざぼん漬</h3></div>
     </div>
   </section>
 
-  <footer>
-    <p><a href="../../">← Travel Logへ戻る</a></p>
-  </footer>
+  <section class="card">
+    <h2>予定からの主な変更</h2>
+    <ul><li>波佐見：開店時間に合わせ、やきもの公園 → HIROPPA → 西の原へ順序変更</li><li>波佐見からの帰り：西の原バス停ではなく、徒歩で内海バス停へ</li><li>7/17夜：中華粥などを見送り、ASA DININGSへ</li><li>7/18：好天のため高島海水浴場へ</li><li>最終日朝食：ホテルではなくSeattle's Best Coffeeへ</li></ul>
+  </section>
+
+  <footer><p><a href="../../index.html">← Travel Logへ戻る</a></p></footer>
 </main>
+<dialog id="photo-lightbox" class="photo-lightbox" aria-label="写真を拡大表示">
+  <div class="photo-lightbox-content">
+    <button class="photo-lightbox-close" type="button" aria-label="拡大表示を閉じる" title="閉じる">×</button>
+    <img src="" alt="">
+  </div>
+</dialog>
 <script>
-const weatherPlans = [
-  { date: "2026-07-15", label: "7/15（水）", place: "嬉野", office: "410000", forecastAreas: ["南部", "佐賀県"], tempAreas: ["佐賀"] },
-  { date: "2026-07-16", label: "7/16（木）", place: "波佐見・長崎", office: "420000", forecastAreas: ["南部", "長崎県"], tempAreas: ["長崎"] },
-  { date: "2026-07-17", label: "7/17（金）", place: "長崎", office: "420000", forecastAreas: ["南部", "長崎県"], tempAreas: ["長崎"] },
-  { date: "2026-07-18", label: "7/18（土）", place: "長崎・高島", office: "420000", forecastAreas: ["南部", "長崎県"], tempAreas: ["長崎"] },
-  { date: "2026-07-19", label: "7/19（日）", place: "長崎", office: "420000", forecastAreas: ["南部", "長崎県"], tempAreas: ["長崎"] }
-];
+  const photoLightbox = document.getElementById("photo-lightbox");
+  const lightboxImage = photoLightbox.querySelector("img");
 
-const jmaWeatherLabels = {
-  "100": "晴れ", "101": "晴れ時々くもり", "102": "晴れ一時雨", "103": "晴れ時々雨",
-  "110": "晴れ後時々くもり", "111": "晴れ後くもり", "112": "晴れ後一時雨", "113": "晴れ後時々雨", "114": "晴れ後雨",
-  "200": "くもり", "201": "くもり時々晴れ", "202": "くもり一時雨", "203": "くもり時々雨",
-  "210": "くもり後時々晴れ", "211": "くもり後晴れ", "212": "くもり後一時雨", "213": "くもり後時々雨", "214": "くもり後雨",
-  "300": "雨", "301": "雨時々晴れ", "302": "雨時々止む", "303": "雨時々雪", "306": "大雨",
-  "311": "雨後晴れ", "313": "雨後くもり", "314": "雨後時々雪", "315": "雨後雪",
-  "400": "雪", "401": "雪時々晴れ", "402": "雪時々止む", "403": "雪時々雨",
-  "411": "雪後晴れ", "413": "雪後くもり", "414": "雪後雨"
-};
+  function openPhotoLightbox(image) {
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt;
+    photoLightbox.showModal();
+  }
 
-function dateKey(time) {
-  return String(time).slice(0, 10);
-}
-
-function areaMatches(area, names) {
-  return names.some((name) => area?.name === name || area?.name?.includes(name));
-}
-
-function toNumber(value) {
-  if (value === "" || value === null || value === undefined) return null;
-  const number = Number(value);
-  return Number.isFinite(number) ? number : null;
-}
-
-function weatherLabel(code) {
-  if (jmaWeatherLabels[code]) return jmaWeatherLabels[code];
-  if (String(code).startsWith("1")) return "晴れ";
-  if (String(code).startsWith("2")) return "くもり";
-  if (String(code).startsWith("3")) return "雨";
-  if (String(code).startsWith("4")) return "雪";
-  return "天気";
-}
-
-function weatherIcon(text, code) {
-  const value = `${text || ""}${code || ""}`;
-  if (value.includes("雷")) return "⛈️";
-  if (value.includes("雪") || String(code).startsWith("4")) return "❄️";
-  if (value.includes("雨") || String(code).startsWith("3")) return "🌧️";
-  if (value.includes("晴") || String(code).startsWith("1")) return "☀️";
-  if (value.includes("くもり") || value.includes("曇") || String(code).startsWith("2")) return "☁️";
-  return "🌡️";
-}
-
-function readJmaForecast(plan, reports) {
-  const result = {
-    label: plan.label,
-    place: plan.place,
-    weather: null,
-    weatherCode: null,
-    rain: null,
-    min: null,
-    max: null
-  };
-
-  reports.forEach((report) => {
-    report.timeSeries?.forEach((series) => {
-      const dates = series.timeDefines?.map(dateKey) || [];
-
-      series.areas?.forEach((area) => {
-        if (area.weatherCodes && areaMatches(area.area, plan.forecastAreas)) {
-          const index = dates.indexOf(plan.date);
-          if (index >= 0) result.weatherCode = area.weatherCodes[index] || result.weatherCode;
-        }
-
-        if (area.weathers && areaMatches(area.area, plan.forecastAreas)) {
-          const index = dates.indexOf(plan.date);
-          if (index >= 0) result.weather = area.weathers[index] || result.weather;
-        }
-
-        if (area.pops && areaMatches(area.area, plan.forecastAreas)) {
-          const pops = area.pops
-            .map((pop, index) => dates[index] === plan.date ? toNumber(pop) : null)
-            .filter(Number.isFinite);
-          if (pops.length) result.rain = Math.max(...pops);
-        }
-
-        if (areaMatches(area.area, plan.tempAreas)) {
-          if (area.tempsMin || area.tempsMax) {
-            const index = dates.indexOf(plan.date);
-            if (index >= 0) {
-              const min = toNumber(area.tempsMin?.[index]);
-              const max = toNumber(area.tempsMax?.[index]);
-              if (Number.isFinite(min)) result.min = min;
-              if (Number.isFinite(max)) result.max = max;
-            }
-          }
-
-          if (area.temps) {
-            const temps = area.temps
-              .map((temp, index) => dates[index] === plan.date ? toNumber(temp) : null)
-              .filter(Number.isFinite);
-            if (temps.length) {
-              result.min = Math.min(...temps);
-              result.max = Math.max(...temps);
-            }
-          }
-        }
-      });
+  document.querySelectorAll(".archive-postcard-grid img, .place-photo").forEach((image) => {
+    image.tabIndex = 0;
+    image.setAttribute("role", "button");
+    image.setAttribute("aria-label", `${image.alt || "写真"}を拡大表示`);
+    image.addEventListener("click", () => openPhotoLightbox(image));
+    image.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openPhotoLightbox(image);
+      }
     });
   });
 
-  return result;
-}
-
-async function loadWeatherForecast() {
-  const container = document.getElementById("weather-forecast");
-  if (!container) return;
-
-  try {
-    const officeCodes = [...new Set(weatherPlans.map((plan) => plan.office))];
-    const reportsByOffice = Object.fromEntries(await Promise.all(officeCodes.map(async (office) => {
-      const response = await fetch(`https://www.jma.go.jp/bosai/forecast/data/forecast/${office}.json`);
-      if (!response.ok) throw new Error("weather request failed");
-      return [office, await response.json()];
-    })));
-
-    const forecasts = weatherPlans.map((plan) => readJmaForecast(plan, reportsByOffice[plan.office]));
-
-    container.innerHTML = forecasts.map((forecast) => {
-      if (!forecast.weather && !forecast.weatherCode && forecast.rain === null && forecast.min === null && forecast.max === null) {
-        return `
-          <div class="weather-item">
-            <strong>${forecast.label}</strong>
-            <span>${forecast.place}</span>
-            <span class="weather-main">予報待ち</span>
-          </div>
-        `;
-      }
-
-      const label = forecast.weather || weatherLabel(forecast.weatherCode);
-      const temperature = forecast.min !== null && forecast.max !== null ? `${forecast.min}℃ / ${forecast.max}℃` : "気温 -";
-      return `
-        <div class="weather-item">
-          <strong>${forecast.label}</strong>
-          <span>${forecast.place}</span>
-          <span class="weather-main">${weatherIcon(label, forecast.weatherCode)} ${label}</span>
-          <span>${temperature}</span>
-          <span>降水確率 ${forecast.rain ?? "-"}%</span>
-        </div>
-      `;
-    }).join("");
-  } catch (error) {
-    container.innerHTML = '<p class="meta">気象庁の天気予報を読み込めませんでした。気象庁またはtenki.jpで確認してください。</p>';
-  }
-}
-
-loadWeatherForecast();
+  photoLightbox.querySelector("button").addEventListener("click", () => photoLightbox.close());
+  photoLightbox.addEventListener("click", (event) => {
+    if (event.target === photoLightbox) photoLightbox.close();
+  });
 </script>
 </body>
 </html>
