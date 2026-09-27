@@ -97,6 +97,82 @@ th{background:#eaf4f6;text-align:left}
   margin-bottom:12px;
   background:#e7eef1;
 }
+.archive-image-link{
+  display:block;
+}
+.archive-map{
+  display:block;
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#e7eef1;
+}
+.archive-document-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:14px;
+}
+.archive-document-grid img{
+  display:block;
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#e7eef1;
+}
+.archive-ticket-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:14px;
+  margin-top:18px;
+}
+.archive-ticket-grid img{
+  display:block;
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#e7eef1;
+}
+.archive-feature{
+  display:grid;
+  grid-template-columns:minmax(200px,300px) 1fr;
+  gap:18px;
+  align-items:center;
+  margin:18px 0;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fbfdfe;
+}
+.archive-feature img{
+  display:block;
+  width:100%;
+  border-radius:10px;
+  border:1px solid var(--line);
+}
+.archive-feature h3{margin-top:0}
+.archive-postcard-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:14px;
+}
+.archive-postcard-grid figure{
+  margin:0;
+  border:1px solid var(--line);
+  border-radius:12px;
+  overflow:hidden;
+  background:#fbfdfe;
+}
+.archive-postcard-grid img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  background:#e7eef1;
+}
+.archive-postcard-grid figcaption{
+  padding:8px 10px;
+  font-weight:700;
+}
 .place h3{margin-top:0}
 .food-grid{
   display:grid;
@@ -156,6 +232,8 @@ footer{color:var(--muted);font-size:.9rem;margin-top:36px}
   table{background:var(--card)}
   th{background:#152c38}
   .place{background:#14202a}
+  .archive-postcard-grid figure{background:#14202a}
+  .archive-feature{background:#14202a}
   .food-item{background:#14202a}
   .weather-item{background:#14202a}
   .note{background:#2b2412}
