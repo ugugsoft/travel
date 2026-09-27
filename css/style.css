@@ -97,6 +97,17 @@ th{background:#eaf4f6;text-align:left}
   margin-bottom:12px;
   background:#e7eef1;
 }
+.place-photo-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:8px;
+  margin-bottom:12px;
+}
+.place-photo-grid .place-photo{
+  margin-bottom:0;
+  object-fit:contain;
+}
+.purchase-photo{object-fit:contain}
 .archive-image-link{
   display:block;
 }
@@ -155,6 +166,10 @@ th{background:#eaf4f6;text-align:left}
   grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
   gap:14px;
 }
+.archive-postcard-grid--dinner{
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  margin-top:12px;
+}
 .archive-postcard-grid figure{
   margin:0;
   border:1px solid var(--line);
@@ -169,9 +184,46 @@ th{background:#eaf4f6;text-align:left}
   object-fit:cover;
   background:#e7eef1;
 }
+.archive-postcard--portrait img{aspect-ratio:3/4}
+.archive-postcard--trimmed-portrait img{aspect-ratio:15/19}
+.archive-postcard--tall img{aspect-ratio:135/188}
+.archive-postcard--wide img{aspect-ratio:3/2}
 .archive-postcard-grid figcaption{
   padding:8px 10px;
   font-weight:700;
+}
+.archive-postcard-grid img,
+.place-photo{cursor:zoom-in}
+.photo-lightbox{
+  border:0;
+  padding:0;
+  max-width:96vw;
+  max-height:96vh;
+  background:transparent;
+}
+.photo-lightbox::backdrop{background:rgba(0,0,0,.82)}
+.photo-lightbox-content{position:relative}
+.photo-lightbox img{
+  display:block;
+  max-width:94vw;
+  max-height:90vh;
+  width:auto;
+  height:auto;
+  background:#111;
+}
+.photo-lightbox-close{
+  position:absolute;
+  top:8px;
+  right:8px;
+  width:40px;
+  height:40px;
+  border:0;
+  border-radius:50%;
+  background:rgba(0,0,0,.72);
+  color:#fff;
+  font-size:28px;
+  line-height:1;
+  cursor:pointer;
 }
 .place h3{margin-top:0}
 .food-grid{
