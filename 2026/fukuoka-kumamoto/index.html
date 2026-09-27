@@ -27,11 +27,20 @@
 
   <section class="card">
     <h2>この旅について</h2>
-    <p>神戸から阪九フェリーで新門司へ渡り、福岡で吹奏楽演奏会を鑑賞。熊本では市内と阿蘇を訪ねる計画です。これは旅行前の予定ページのため、候補・未確定の内容は実績として扱っていません。</p>
+    <p>神戸から阪九フェリーで新門司へ渡り、福岡で吹奏楽演奏会を鑑賞。熊本市内と阿蘇を訪ねる計画。旅行前の予定ページにつき、候補・未確定の内容は実績扱いの対象外。</p>
     <div class="note">
       <strong>計画段階</strong><br>
-      予約済みの交通・宿泊と、候補・未確定の行程を区別して掲載しています。旅行後に実際の行程、写真、食事、感想を追加予定です。
+      予約済みの交通・宿泊と、候補・未確定の行程を区別して掲載。旅行後に実際の行程、写真、食事、感想を追加予定。
     </div>
+  </section>
+
+  <section class="card">
+    <h2>天気予報</h2>
+    <p class="meta">気象庁の府県天気予報を自動取得。予報未配信日は「予報待ち」と表示。</p>
+    <div id="weather-forecast" class="weather-grid" aria-live="polite">
+      <p class="meta">天気予報を読み込み中...</p>
+    </div>
+    <p class="meta">公式サイト：<a href="https://www.jma.go.jp/bosai/forecast/" target="_blank" rel="noopener">気象庁</a></p>
   </section>
 
   <section class="card">
@@ -61,8 +70,14 @@
       <div class="place">
         <img class="place-photo" src="images/other_sakura.jpg" alt="九州新幹線 さくら" loading="lazy">
         <h3>🚅 九州新幹線 さくら411号</h3>
-        <p>10/4 博多 17:36発、熊本へ。演奏会後に熊本へ移動する予定です。</p>
+        <p>10/4 博多 17:36発、熊本へ。演奏会後の熊本移動。</p>
         <p class="meta">EX早特3｜運賃：4,950円｜モバイルICOCA利用</p>
+      </div>
+      <div class="place">
+        <img class="place-photo" src="images/other_asoboi.png" alt="特急 あそぼーい！" loading="lazy">
+        <h3>🚃 特急 あそぼーい！</h3>
+        <p>10/5 熊本 9:57発 → 阿蘇 11:22着、阿蘇 15:56発 → 熊本 17:08着。</p>
+        <p class="meta">往復予約済み｜運賃：各3,080円｜QRチケレス対応きっぷ</p>
       </div>
       <div class="place">
         <img class="place-photo" src="images/hotel_nikkokumamoto.png" alt="ホテル日航熊本" loading="lazy">
@@ -73,7 +88,7 @@
       <div class="place">
         <img class="place-photo" src="images/hotel_blossomkumamoto.png" alt="THE BLOSSOM KUMAMOTO" loading="lazy">
         <h3>THE BLOSSOM KUMAMOTO</h3>
-        <p>10/5〜10/6、禁煙モデレートダブル、シャワーブースタイプ、朝食付き。到着予定は19:00です。</p>
+        <p>10/5〜10/6、禁煙モデレートダブル、シャワーブースタイプ、朝食付き。到着予定 19:00。</p>
         <p class="meta">料金：22,734円｜3日前からキャンセル料あり</p>
       </div>
     </div>
@@ -85,15 +100,15 @@
       <div class="place">
         <img class="place-photo" src="images/other_hankyuferrybus.JPG" alt="阪九フェリー神戸乗り場へ向かうバス停" loading="lazy">
         <h3>阪九フェリー連絡バス</h3>
-        <p class="meta">神戸・六甲アイランドの阪九フェリー乗り場へ向かう予定です。</p>
+        <p class="meta">神戸・六甲アイランドの阪九フェリー乗り場への移動予定。</p>
       </div>
     </div>
     <div class="timeline">
-      <p><span class="time">18:10</span> 阪九フェリー連絡バスに乗車予定。</p>
-      <p><span class="time">18:32</span> 阪九フェリー神戸乗り場に到着予定。</p>
+      <p><span class="time">18:10</span> 阪九フェリー連絡バス乗車予定</p>
+      <p><span class="time">18:32</span> 阪九フェリー神戸乗り場到着予定</p>
       <p><span class="time">19:00</span> 阪九フェリー船内レストラン開店。乗船後に夕食を取る案。</p>
       <p><span class="time">20:00</span> 神戸・六甲アイランドから阪九フェリー「やまと」出発［予約済み］</p>
-      <p><span class="time">船内</span> 船内で宿泊。実際の食事・乗船記は旅行後に追記予定。</p>
+      <p><span class="time">船内</span> 船内泊。実際の食事・乗船記は旅行後に追記予定。</p>
     </div>
   </section>
 
@@ -101,8 +116,8 @@
     <h2>Day 2｜10/4（日） 新門司・福岡・熊本</h2>
     <div class="timeline">
       <p><span class="time">08:30</span> 新門司港 到着予定［予約済み］</p>
-      <p><span class="time">午前</span> 阪九フェリー連絡バスで小倉方面へ移動し、博多へ。列車・バスの詳細は未確定。</p>
-      <p><span class="time">昼</span> 博多で昼食後、サンレイクかすやへ移動予定。</p>
+      <p><span class="time">午前</span> 阪九フェリー連絡バスで小倉方面へ移動、博多へ。列車・バスの詳細は未確定。</p>
+      <p><span class="time">昼</span> 博多での昼食後、サンレイクかすやへの移動予定</p>
       <p><span class="time">14:00</span> 演奏会、サンレイクかすや［確定］</p>
       <p><span class="time">17:36</span> 博多発・九州新幹線「さくら411号」で熊本へ［予約済み］</p>
       <p><span class="time">夜</span> ホテル日航熊本へチェックイン［予約済み］。熊本市中心部の散策は候補。</p>
@@ -111,7 +126,7 @@
 
   <section class="card">
     <h2>Day 3｜10/5（月） 阿蘇観光</h2>
-    <p>今回の熊本旅行の主な観光日です。阿蘇を訪れるのは、1988年の修学旅行以来、約38年ぶりの予定です。</p>
+    <p>今回の熊本旅行の主な観光日。阿蘇は1988年の修学旅行以来、約38年ぶり。</p>
     <div class="place-grid">
       <div class="place">
         <img class="place-photo" src="images/other_aso.jpg" alt="阿蘇" loading="lazy">
@@ -131,20 +146,32 @@
         </ul>
       </div>
       <div class="place">
-        <h3>移動の検討状況</h3>
-        <p>JR豊肥本線で阿蘇駅へ向かい、阿蘇駅からバスを利用する案。公共交通では片道およそ2時間が目安です。</p>
-        <p class="meta">具体的な列車・バスは未確定</p>
+        <h3>移動</h3>
+        <p>熊本・阿蘇間は特急「あそぼーい！」往復予約済み。阿蘇駅から草千里方面はバス利用予定。</p>
+        <p class="meta">基準の時刻表は2026/5/11現在。ダイヤ・運行状況は旅行直前に確認</p>
+        <div class="button-row">
+          <a class="button" href="https://www.sankobus.jp/" target="_blank" rel="noopener">産交バス公式サイト</a>
+          <a class="button secondary" href="images/tt-asotozansen-20260511.pdf" target="_blank" rel="noopener">阿蘇登山線 時刻表（PDF）</a>
+        </div>
       </div>
     </div>
     <div class="timeline">
-      <p><span class="time">夜</span> 阿蘇から熊本市へ戻り、THE BLOSSOM KUMAMOTOへ。到着予定は19:00［予約済み］</p>
-      <p><span class="time">夜</span> 余力があれば熊本市内へ。疲れていればホテルで過ごす予定。</p>
+      <p><span class="time">09:57</span> 熊本発・特急「あそぼーい！1号」［予約済み］</p>
+      <p><span class="time">11:22</span> 阿蘇着［予約済み］</p>
+      <p><span class="time">11:50</span> 阿蘇駅前発・産交バス阿蘇登山線、草千里方面行き</p>
+      <p><span class="time">12:16</span> 草千里・阿蘇火山博物館前着、昼食・観光</p>
+      <p><span class="time">14:30</span> 草千里・阿蘇火山博物館前発・産交バス、阿蘇駅前へ（14:58着予定）</p>
+      <p><span class="time">15:56</span> 阿蘇発・特急「あそぼーい！4号」［予約済み］</p>
+      <p><span class="time">17:08</span> 熊本着［予約済み］</p>
+      <p><span class="time">雨天時</span> 早めの切り上げ時は、草千里12:45・13:20・13:55発で阿蘇駅へ戻る案</p>
+      <p><span class="time">夜</span> 阿蘇から熊本市へ戻り、THE BLOSSOM KUMAMOTOへ。到着予定 19:00［予約済み］</p>
+      <p><span class="time">夜</span> 余力次第で熊本市内へ。疲労時はホテル滞在。</p>
     </div>
   </section>
 
   <section class="card">
     <h2>Day 4｜10/6（火） 熊本市内観光・帰宅</h2>
-    <p>午前から午後は熊本市内を観光予定です。帰路の時間に合わせ、すべてを回る前提にはせず調整します。</p>
+    <p>午前から午後は熊本市内観光。帰路の時間に合わせ、全候補を回らない前提での調整。</p>
     <div class="place-grid">
       <div class="place">
         <img class="place-photo" src="images/other_kumamotojo.jpg" alt="熊本城" loading="lazy">
@@ -158,7 +185,7 @@
       </div>
       <div class="place">
         <h3>熊本から関西への帰路</h3>
-        <p>飛行機または新幹線を検討中です。飛行機は熊本空港から伊丹空港を中心に、JAL・ANA便を比較しています。</p>
+        <p>飛行機または新幹線を検討中。飛行機は熊本空港から伊丹空港を中心に、JAL・ANA便を比較。</p>
         <p class="meta">帰路は未確定</p>
       </div>
     </div>
@@ -180,7 +207,7 @@
 
   <section class="card">
     <h2>地図</h2>
-    <p class="meta">共有リストではなく、個別の地点を開くリンクです。</p>
+    <p class="meta">共有リストではなく、個別地点を開くリンク。</p>
     <h3>交通・宿泊</h3>
     <div class="place-grid">
       <div class="place">
@@ -233,6 +260,22 @@
         </div>
       </div>
       <div class="place">
+        <h3>ニュー草千里</h3>
+        <p class="meta">草千里周辺の昼食候補</p>
+        <div class="button-row">
+          <a class="button secondary" href="https://maps.app.goo.gl/jQQQ47HiKuBHZw9w6" target="_blank" rel="noopener">地図を開く</a>
+          <a class="button" href="https://www.newkusasenri.com/" target="_blank" rel="noopener">公式サイト</a>
+        </div>
+      </div>
+      <div class="place">
+        <h3>道の駅 阿蘇</h3>
+        <p class="meta">阿蘇駅隣接。早めに戻った際の休憩・お土産候補</p>
+        <div class="button-row">
+          <a class="button secondary" href="https://maps.app.goo.gl/MiAxWVAmXcBYEiSj6" target="_blank" rel="noopener">地図を開く</a>
+          <a class="button" href="https://www.aso-denku.jp/" target="_blank" rel="noopener">公式サイト</a>
+        </div>
+      </div>
+      <div class="place">
         <h3>阿蘇火山博物館</h3>
         <div class="button-row">
           <a class="button secondary" href="https://maps.app.goo.gl/TD3xXcCqLLiMMCBb7" target="_blank" rel="noopener">地図を開く</a>
@@ -241,7 +284,7 @@
       </div>
       <div class="place">
         <h3>阿蘇中岳 第1火口</h3>
-        <p class="meta">当日の火山活動・規制状況次第の候補です。</p>
+        <p class="meta">当日の火山活動・規制状況次第の候補</p>
         <div class="button-row">
           <a class="button secondary" href="https://maps.app.goo.gl/Ax4ZLXFwHjq72H9S9" target="_blank" rel="noopener">地図を開く</a>
           <a class="button accent" href="https://www.aso-volcano.jp/" target="_blank" rel="noopener">火口規制情報</a>
@@ -278,7 +321,7 @@
         </ul>
       </div>
     </div>
-    <p class="meta">すべて旅行前の候補です。訪問店・実際に食べたものは旅行後に追記予定。</p>
+    <p class="meta">すべて旅行前の候補。訪問店・実際に食べたものは旅行後に追記予定。</p>
     <h3>飲食店候補</h3>
     <div class="place-grid">
       <div class="place">
@@ -303,20 +346,6 @@
         </div>
       </div>
       <div class="place">
-        <h3>10/5 昼｜阿蘇</h3>
-        <p>あか牛丼専門店 ごとう屋 門前町店</p>
-        <div class="button-row">
-          <a class="button secondary" href="https://maps.app.goo.gl/WgizgoGZ43qmZzW4A" target="_blank" rel="noopener">地図を開く</a>
-        </div>
-      </div>
-      <div class="place">
-        <h3>10/5 昼｜阿蘇</h3>
-        <p>いまきん食堂</p>
-        <div class="button-row">
-          <a class="button secondary" href="https://maps.app.goo.gl/5D3wp8bxic4fYks16" target="_blank" rel="noopener">地図を開く</a>
-        </div>
-      </div>
-      <div class="place">
         <h3>10/6 昼｜熊本市内</h3>
         <p>紅蘭亭</p>
         <div class="button-row">
@@ -331,21 +360,178 @@
         </div>
       </div>
     </div>
-    <p class="meta">営業時間・定休日・予約可否は、旅行直前に各店舗へ確認予定。</p>
+    <p class="meta">営業時間・定休日・予約可否は旅行直前に各店舗へ確認予定。</p>
     <h3>Google Maps</h3>
-    <p>「熊本2026」リストを作成済み。観光地、繁華街、飲食店などの候補を保存しています。</p>
+    <p>「熊本2026」リスト作成済み。観光地、繁華街、飲食店などの候補を保存。</p>
     <div class="button-row">
       <a class="button" href="https://maps.app.goo.gl/i3bZfHiESnJZJgGG7" target="_blank" rel="noopener">「熊本2026」を開く</a>
     </div>
     <h3>今回見送る場所</h3>
-    <p>天草は日程に十分な時間を確保できないため、今回は見送ります。将来の熊本旅行の候補です。</p>
+    <p>天草は日程に十分な時間を確保できないため、今回は見送り。将来の熊本旅行候補。</p>
     <h3>旅行後に追加するもの</h3>
-    <p class="meta">実際の移動時刻・交通機関・訪問先・食事・写真・宿泊レビュー・フェリー乗船記・演奏会・阿蘇・熊本城・帰路・感想を追加予定。</p>
+    <p class="meta">実際の移動時刻・交通機関・訪問先・食事・写真・宿泊レビュー・フェリー乗船記・演奏会・阿蘇・熊本城・帰路・感想の追加予定。</p>
   </section>
 
   <footer>
     <p><a href="../../index.html">← Travel Logへ戻る</a></p>
   </footer>
 </main>
+<script>
+const weatherPlans = [
+  { date: "2026-10-03", label: "10/3（土）", place: "神戸", office: "280000", forecastAreas: ["南部", "兵庫県"], tempAreas: ["神戸"] },
+  { date: "2026-10-04", label: "10/4（日）", place: "福岡", office: "400000", forecastAreas: ["福岡地方", "福岡県"], tempAreas: ["福岡"] },
+  { date: "2026-10-05", label: "10/5（月）", place: "阿蘇", office: "430000", forecastAreas: ["阿蘇地方", "熊本県"], tempAreas: ["阿蘇乙姫"] },
+  { date: "2026-10-06", label: "10/6（火）", place: "熊本", office: "430000", forecastAreas: ["熊本地方", "熊本県"], tempAreas: ["熊本"] }
+];
+
+const jmaWeatherLabels = {
+  "100": "晴れ", "101": "晴れ時々くもり", "102": "晴れ一時雨", "103": "晴れ時々雨",
+  "110": "晴れ後時々くもり", "111": "晴れ後くもり", "112": "晴れ後一時雨", "113": "晴れ後時々雨", "114": "晴れ後雨",
+  "200": "くもり", "201": "くもり時々晴れ", "202": "くもり一時雨", "203": "くもり時々雨",
+  "210": "くもり後時々晴れ", "211": "くもり後晴れ", "212": "くもり後一時雨", "213": "くもり後時々雨", "214": "くもり後雨",
+  "300": "雨", "301": "雨時々晴れ", "302": "雨時々止む", "303": "雨時々雪", "306": "大雨",
+  "311": "雨後晴れ", "313": "雨後くもり", "314": "雨後時々雪", "315": "雨後雪",
+  "400": "雪", "401": "雪時々晴れ", "402": "雪時々止む", "403": "雪時々雨",
+  "411": "雪後晴れ", "413": "雪後くもり", "414": "雪後雨"
+};
+
+function dateKey(time) {
+  return String(time).slice(0, 10);
+}
+
+function areaMatches(area, names) {
+  return names.some((name) => area?.name === name || area?.name?.includes(name));
+}
+
+function toNumber(value) {
+  if (value === "" || value === null || value === undefined) return null;
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
+function weatherLabel(code) {
+  if (jmaWeatherLabels[code]) return jmaWeatherLabels[code];
+  if (String(code).startsWith("1")) return "晴れ";
+  if (String(code).startsWith("2")) return "くもり";
+  if (String(code).startsWith("3")) return "雨";
+  if (String(code).startsWith("4")) return "雪";
+  return "天気";
+}
+
+function weatherIcon(text, code) {
+  const value = `${text || ""}${code || ""}`;
+  if (value.includes("雷")) return "⛈️";
+  if (value.includes("雪") || String(code).startsWith("4")) return "❄️";
+  if (value.includes("雨") || String(code).startsWith("3")) return "🌧️";
+  if (value.includes("晴") || String(code).startsWith("1")) return "☀️";
+  if (value.includes("くもり") || value.includes("曇") || String(code).startsWith("2")) return "☁️";
+  return "🌡️";
+}
+
+function readJmaForecast(plan, reports) {
+  const result = {
+    label: plan.label,
+    place: plan.place,
+    weather: null,
+    weatherCode: null,
+    rain: null,
+    min: null,
+    max: null
+  };
+
+  reports.forEach((report) => {
+    report.timeSeries?.forEach((series) => {
+      const dates = series.timeDefines?.map(dateKey) || [];
+
+      series.areas?.forEach((area) => {
+        if (area.weatherCodes && areaMatches(area.area, plan.forecastAreas)) {
+          const index = dates.indexOf(plan.date);
+          if (index >= 0) result.weatherCode = area.weatherCodes[index] || result.weatherCode;
+        }
+
+        if (area.weathers && areaMatches(area.area, plan.forecastAreas)) {
+          const index = dates.indexOf(plan.date);
+          if (index >= 0) result.weather = area.weathers[index] || result.weather;
+        }
+
+        if (area.pops && areaMatches(area.area, plan.forecastAreas)) {
+          const pops = area.pops
+            .map((pop, index) => dates[index] === plan.date ? toNumber(pop) : null)
+            .filter(Number.isFinite);
+          if (pops.length) result.rain = Math.max(...pops);
+        }
+
+        if (areaMatches(area.area, plan.tempAreas)) {
+          if (area.tempsMin || area.tempsMax) {
+            const index = dates.indexOf(plan.date);
+            if (index >= 0) {
+              const min = toNumber(area.tempsMin?.[index]);
+              const max = toNumber(area.tempsMax?.[index]);
+              if (Number.isFinite(min)) result.min = min;
+              if (Number.isFinite(max)) result.max = max;
+            }
+          }
+
+          if (area.temps) {
+            const temps = area.temps
+              .map((temp, index) => dates[index] === plan.date ? toNumber(temp) : null)
+              .filter(Number.isFinite);
+            if (temps.length) {
+              result.min = Math.min(...temps);
+              result.max = Math.max(...temps);
+            }
+          }
+        }
+      });
+    });
+  });
+
+  return result;
+}
+
+async function loadWeatherForecast() {
+  const container = document.getElementById("weather-forecast");
+  if (!container) return;
+
+  try {
+    const officeCodes = [...new Set(weatherPlans.map((plan) => plan.office))];
+    const reportsByOffice = Object.fromEntries(await Promise.all(officeCodes.map(async (office) => {
+      const response = await fetch(`https://www.jma.go.jp/bosai/forecast/data/forecast/${office}.json`);
+      if (!response.ok) throw new Error("weather request failed");
+      return [office, await response.json()];
+    })));
+
+    const forecasts = weatherPlans.map((plan) => readJmaForecast(plan, reportsByOffice[plan.office]));
+
+    container.innerHTML = forecasts.map((forecast) => {
+      if (!forecast.weather && !forecast.weatherCode && forecast.rain === null && forecast.min === null && forecast.max === null) {
+        return `
+          <div class="weather-item">
+            <strong>${forecast.label}</strong>
+            <span>${forecast.place}</span>
+            <span class="weather-main">予報待ち</span>
+          </div>
+        `;
+      }
+
+      const label = forecast.weather || weatherLabel(forecast.weatherCode);
+      const temperature = forecast.min !== null && forecast.max !== null ? `${forecast.min}℃ / ${forecast.max}℃` : "気温 -";
+      return `
+        <div class="weather-item">
+          <strong>${forecast.label}</strong>
+          <span>${forecast.place}</span>
+          <span class="weather-main">${weatherIcon(label, forecast.weatherCode)} ${label}</span>
+          <span>${temperature}</span>
+          <span>降水確率 ${forecast.rain ?? "-"}%</span>
+        </div>
+      `;
+    }).join("");
+  } catch (error) {
+    container.innerHTML = '<p class="meta">気象庁の天気予報を取得不可。気象庁で要確認。</p>';
+  }
+}
+
+loadWeatherForecast();
+</script>
 </body>
 </html>
