@@ -36,7 +36,7 @@
 
   <section class="card">
     <h2>天気予報</h2>
-    <p class="meta">気象庁の府県天気予報を自動取得。阿蘇の気温は阿蘇市向け資料で確認。</p>
+    <p class="meta">気象庁の府県天気予報を自動取得。当日と地域時系列予報の対象に入った翌日は3時間ごとの気温から最低・最高を算出、それ以降は日別予報を表示。阿蘇の気温は阿蘇乙姫の予報地点で確認。</p>
     <div id="weather-forecast" class="weather-grid" aria-live="polite">
       <p class="meta">天気予報を読み込み中...</p>
     </div>
@@ -406,10 +406,10 @@
 </main>
 <script>
 const weatherPlans = [
-  { date: "2026-10-03", label: "10/3（土）", place: "神戸", office: "280000", forecastAreas: ["南部", "兵庫県"], tempAreas: ["神戸"] },
-  { date: "2026-10-04", label: "10/4（日）", place: "福岡", office: "400000", forecastAreas: ["福岡地方", "福岡県"], tempAreas: ["福岡"] },
-  { date: "2026-10-05", label: "10/5（月）", place: "阿蘇", office: "430000", forecastAreas: ["阿蘇地方", "熊本県"], tempAreas: ["阿蘇乙姫"] },
-  { date: "2026-10-06", label: "10/6（火）", place: "熊本", office: "430000", forecastAreas: ["熊本地方", "熊本県"], tempAreas: ["熊本"] }
+  { date: "2026-10-03", label: "10/3（土）", place: "神戸", office: "280000", timeSeriesArea: "280010", forecastAreas: ["南部", "兵庫県"], tempAreas: ["神戸"] },
+  { date: "2026-10-04", label: "10/4（日）", place: "福岡", office: "400000", timeSeriesArea: "400010", forecastAreas: ["福岡地方", "福岡県"], tempAreas: ["福岡"] },
+  { date: "2026-10-05", label: "10/5（月）", place: "阿蘇", office: "430000", timeSeriesArea: "430020", forecastAreas: ["阿蘇地方", "熊本県"], tempAreas: ["阿蘇乙姫"] },
+  { date: "2026-10-06", label: "10/6（火）", place: "熊本", office: "430000", timeSeriesArea: "430010", forecastAreas: ["熊本地方", "熊本県"], tempAreas: ["熊本"] }
 ];
 
 const jmaWeatherLabels = {
@@ -456,6 +456,17 @@ function weatherIcon(text, code) {
   return "🌡️";
 }
 
+function todayInJapan() {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(new Date());
+  const values = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
+  return `${values.year}-${values.month}-${values.day}`;
+}
+
 function readJmaForecast(plan, reports) {
   const result = {
     label: plan.label,
@@ -491,8 +502,7 @@ function readJmaForecast(plan, reports) {
         }
 
         const preferredTempArea = areaMatches(area.area, plan.tempAreas);
-        const fallbackTempArea = !result.tempSource && areaMatches(area.area, plan.tempFallbackAreas || []);
-        if (preferredTempArea || fallbackTempArea) {
+        if (preferredTempArea) {
           if (area.tempsMin || area.tempsMax) {
             const index = dates.indexOf(plan.date);
             if (index >= 0) {
@@ -503,23 +513,33 @@ function readJmaForecast(plan, reports) {
               if (Number.isFinite(min) || Number.isFinite(max)) result.tempSource = area.area.name;
             }
           }
-
-          if (area.temps) {
-            const temps = area.temps
-              .map((temp, index) => dates[index] === plan.date ? toNumber(temp) : null)
-              .filter(Number.isFinite);
-            if (temps.length) {
-              result.min = Math.min(...temps);
-              result.max = Math.max(...temps);
-              result.tempSource = area.area.name;
-            }
-          }
         }
       });
     });
   });
 
   return result;
+}
+
+function readJmaTimeSeriesTemperature(plan, report) {
+  const series = report?.pointTimeSeries;
+  if (!series?.timeDefines || !series.temperature) return null;
+  const temps = series.temperature
+    .filter((temp, index) => dateKey(series.timeDefines[index]?.dateTime) === plan.date)
+    .map(toNumber)
+    .filter(Number.isFinite);
+  if (!temps.length) return null;
+  return {
+    min: Math.min(...temps),
+    max: Math.max(...temps),
+    tempSource: series.pointNameJP || plan.place
+  };
+}
+
+function isWithinTimeSeriesHorizon(date) {
+  const [year, month, day] = todayInJapan().split("-").map(Number);
+  const tomorrow = new Date(Date.UTC(year, month - 1, day + 1)).toISOString().slice(0, 10);
+  return date >= todayInJapan() && date <= tomorrow;
 }
 
 async function loadWeatherForecast() {
@@ -535,6 +555,20 @@ async function loadWeatherForecast() {
     })));
 
     const forecasts = weatherPlans.map((plan) => readJmaForecast(plan, reportsByOffice[plan.office]));
+    const timeSeriesPlans = weatherPlans
+      .map((plan, index) => ({ plan, index }))
+      .filter(({ plan }) => isWithinTimeSeriesHorizon(plan.date));
+    await Promise.all(timeSeriesPlans.map(async ({ plan, index }) => {
+      try {
+        const response = await fetch(`https://www.jma.go.jp/bosai/jmatile/data/wdist/VPFD/${plan.timeSeriesArea}.json`);
+        if (response.ok) {
+          const temperature = readJmaTimeSeriesTemperature(plan, await response.json());
+          if (temperature) Object.assign(forecasts[index], temperature);
+        }
+      } catch {
+        // 地域時系列データを取得できない場合は、日別予報の値を維持
+      }
+    }));
 
     container.innerHTML = forecasts.map((forecast) => {
       if (!forecast.weather && !forecast.weatherCode && forecast.rain === null && forecast.min === null && forecast.max === null) {
@@ -550,7 +584,7 @@ async function loadWeatherForecast() {
       const label = forecast.weather || weatherLabel(forecast.weatherCode);
       const temperature = forecast.min !== null && forecast.max !== null
         ? `${forecast.tempSource && forecast.tempSource !== forecast.place ? `気温（${forecast.tempSource}） ` : ""}${forecast.min}℃ / ${forecast.max}℃`
-        : forecast.place === "阿蘇" ? "気温は阿蘇市向け資料で確認" : "気温 -";
+        : "気温 -";
       return `
         <div class="weather-item">
           <strong>${forecast.label}</strong>
