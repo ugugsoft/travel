@@ -19,11 +19,12 @@
     .tag{margin-left:6px}.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
     .check{padding:10px 12px;background:#fbfdfe;border:1px solid var(--line);border-radius:10px}
     .check:before{content:"□ ";color:var(--accent)}
-    .flight-route-image{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:16px}
+    .flight-route-image{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:16px;cursor:zoom-in}
     .flight-route-caption{color:var(--muted);font-size:.88rem;margin:8px 0 16px}
     .flight-route-stops{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin:14px 0 22px}
     .flight-route-stops span{display:flex;flex-direction:column;gap:3px;padding:9px 11px;background:#eef6f7;border:1px solid var(--line);border-radius:10px;font-size:.88rem}
     .flight-route-stops small{color:var(--muted)}
+    @media (prefers-color-scheme: dark){.flight-route-stops span{background:#14202a;color:var(--ink);border-color:var(--line)}}
     .photo-lightbox-caption{margin:8px 44px 0 0;color:#fff;text-align:center;font-size:.95rem}
   </style>
 </head>
@@ -327,7 +328,7 @@
       const enlargedImage = dialog.querySelector('img');
       const caption = dialog.querySelector('.photo-lightbox-caption');
       const closeButton = dialog.querySelector('.photo-lightbox-close');
-      const photos = document.querySelectorAll('.archive-postcard-grid img, .place-photo');
+      const photos = document.querySelectorAll('.archive-postcard-grid img, .place-photo, .flight-route-image');
 
       const openPhoto = (photo) => {
         enlargedImage.src = photo.currentSrc || photo.src;
