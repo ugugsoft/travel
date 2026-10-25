@@ -1,0 +1,364 @@
+﻿<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+    .route,.stats{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:14px 0}
+    .city{display:inline-block;padding:4px 10px;border-radius:999px;background:#e7f3f5;color:#075985;font-size:.88rem}
+    .arrow{color:var(--accent)}
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+    .stat{font-weight:700}.label,.sources, .section-kicker{color:var(--muted);font-size:.88rem}
+    .stay{display:grid;grid-template-columns:100px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+    .stay:last-child{border:0}.stay time{color:var(--muted)}.stay strong{display:block}
+    .day-card h3{margin:0 0 5px}.day-card .date{font-weight:700;color:var(--brand);font-size:.88rem;margin:0 0 4px}
+    .day-card .timeline{margin:12px 0 0}.day-card .timeline p{margin:0 0 5px;min-height:1.7em}.day-card .timeline p:last-child{margin-bottom:0}
+    .record{margin:14px 0 0}
+    .tag{margin-left:6px}.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+    .check{padding:10px 12px;background:#fbfdfe;border:1px solid var(--line);border-radius:10px}
+    .check:before{content:"□ ";color:var(--accent)}
+    .flight-route-image{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:16px}
+    .flight-route-caption{color:var(--muted);font-size:.88rem;margin:8px 0 16px}
+    .flight-route-stops{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin:14px 0 22px}
+    .flight-route-stops span{display:flex;flex-direction:column;gap:3px;padding:9px 11px;background:#eef6f7;border:1px solid var(--line);border-radius:10px;font-size:.88rem}
+    .flight-route-stops small{color:var(--muted)}
+    .photo-lightbox-caption{margin:8px 44px 0 0;color:#fff;text-align:center;font-size:.95rem}
+  </style>
+</head>
+<body>
+  <main>
+  <header>
+    <p><a href="../../index.html">← Travel Log</a></p>
+    <h1>ヨーロッパ2019</h1>
+    <p class="meta">2019/9/12（木）〜9/22（日）｜旅行記</p>
+    <div class="badges"><span class="badge">✈️ ヘルシンキ</span><span class="badge">🏙️ ロンドン</span><span class="badge">🌇 バルセロナ</span><span class="badge">🌙 ドーハ乗継</span></div>
+  </header>
+    <nav aria-label="ページ内ナビゲーション"><a class="badge" href="#overview">旅の概要</a><a class="badge" href="#route">移動と宿泊</a><a class="badge" href="#diary">日ごとの記録</a><a class="badge" href="#todo">記録を補う</a></nav>
+    <section id="overview" class="card"><h2>旅の概要</h2>
+      <div class="stats"><div><div class="stat">11日間</div><div class="label">2019年9月12日〜22日</div></div><div><div class="stat">3都市</div><div class="label">ヘルシンキ · ロンドン · バルセロナ</div></div><div><div class="stat">6 flights</div><div class="label">帰路はドーハ・バンコク経由</div></div></div>
+      <div class="route" aria-label="旅程"><span class="city">神戸</span><span class="arrow">→</span><span class="city">ヘルシンキ</span><span class="arrow">→</span><span class="city">ロンドン</span><span class="arrow">→</span><span class="city">バルセロナ</span><span class="arrow">→</span><span class="city">ドーハ</span><span class="arrow">→</span><span class="city">バンコク</span><span class="arrow">→</span><span class="city">関西</span></div>
+      <div class="note"><strong>時刻の表記</strong><br>飛行機の時刻は出発地・到着地それぞれの現地時刻です。到着時刻の括弧内には、移動元に対する移動先の時差を表示しています（例：ヘルシンキ→ロンドンは−1h）。JST＝日本、EEST＝ヘルシンキ、BST＝ロンドン、CEST＝バルセロナ、AST＝ドーハ、ICT＝バンコク。</div>
+    </section>
+    <section id="route" class="card"><h2>移動と宿泊</h2>
+      <div class="table-wrap"><table><thead><tr><th>日付</th><th>移動</th><th>行程（出発地・到着地の現地時間）</th><th>記録</th></tr></thead><tbody>
+        <tr><td>9/12</td><td>Finnair AY78</td><td>関西 KIX T1 10:45 (JST) → ヘルシンキ HEL T2 14:40 (EEST、−6h)<br><small>クラス/ステータス X/OK · 所要 9時間55分</small></td><td>JAL旅程表（6/30発券）・カレンダー</td></tr>
+        <tr><td>9/14</td><td>Finnair AY1335</td><td>ヘルシンキ HEL 14:05 (EEST) → ロンドン LHR 15:10 (BST、−1h)</td><td>カレンダー・搭乗前メール</td></tr>
+        <tr><td>9/16</td><td>British Airways BA486</td><td>ロンドン LHR 16:40 (BST) → バルセロナ BCN 19:50 (CEST、+1h)</td><td>航空会社メールで日付確認</td></tr>
+        <tr><td>9/20</td><td>Qatar Airways QR138</td><td>バルセロナ BCN 08:50 (CEST) → ドーハ DOH 15:55 (AST、+1h)</td><td>カレンダー</td></tr>
+        <tr><td>9/21</td><td>Qatar Airways QR838</td><td>ドーハ DOH 08:35 (AST) → バンコク BKK 19:20 (ICT、+4h)</td><td>カレンダー</td></tr>
+        <tr><td>9/21–22</td><td>JAL JL728</td><td>バンコク BKK 23:30 (ICT) → 関西 KIX 07:05 (JST、+2h、9/22)</td><td>カレンダー・送迎予約</td></tr>
+      </tbody></table></div>
+      <h3>飛行ルート</h3>
+      <figure><img class="flight-route-image" src="images/actual/europe-2019-route.svg" alt="関西からヘルシンキ、ロンドン、バルセロナ、ドーハ、バンコクを経て関西へ戻る飛行ルートの地図" loading="lazy"><figcaption class="flight-route-caption">丸数字は立ち寄った空港の順番です。下の凡例に各空港の現地日付を記載。曲線は移動区間を示す略図です。</figcaption></figure>
+      <div class="flight-route-stops" aria-label="空港の順番と各都市の到着・出発日"><span><strong>1 関西 KIX</strong><small>9/12 出発</small></span><span><strong>2 ヘルシンキ HEL</strong><small>9/12 到着 · 9/14 出発</small></span><span><strong>3 ロンドン LHR</strong><small>9/14 到着 · 9/16 出発</small></span><span><strong>4 バルセロナ BCN</strong><small>9/16 到着 · 9/20 出発</small></span><span><strong>5 ドーハ DOH</strong><small>9/20 到着 · 9/21 出発</small></span><span><strong>6 バンコク BKK</strong><small>9/21 到着 · 9/21 出発</small></span><span><strong>7 関西 KIX</strong><small>9/22 到着</small></span></div>
+      <div class="city-block"><h3>宿泊予約の記録</h3>
+        <div class="card">
+          <div class="stay"><time>9/12–14</time><div><strong>Scandic Hakaniemi</strong><small>ヘルシンキ · Siltasaarenkatu 14</small></div></div>
+          <div class="stay"><time>9/14–16</time><div><strong>St Giles London – A St Giles Hotel</strong><small>ロンドン · Bedford Ave, Bloomsbury</small></div></div>
+          <div class="stay"><time>9/16–20</time><div><strong>Aparthotel Atenea Calabria</strong><small>バルセロナ · Carrer de Calabria 129。後着の予約確認メールを最終記録の根拠とする。</small></div></div>
+          <div class="stay"><time>9/20–21</time><div><strong>Concorde Hotel Doha</strong><small>ストップオーバー扱いの宿泊手配がなく、自分で予約した宿。</small></div></div>
+        </div>
+      </div>
+    </section>
+    <section id="diary"><h2>日ごとの記録</h2>
+      <article class="card day-card"><p class="date">DAY 01 · 9月12日（木）</p><h3>神戸からヘルシンキへ <span class="badge">移動</span></h3>
+        <div class="timeline">
+          <p><span class="time">07:05頃 (JST)</span> 自宅からMKスカイゲイトシャトルで関西空港へ</p>
+          <p><span class="time">10:45 (JST)</span> 関西 KIX 発・Finnair AY78便</p>
+          <p><span class="time">14:40 (EEST、−6h)</span> ヘルシンキ HEL 着</p>
+          <p><span class="time">夜</span> Scandic Hakaniemi 泊</p>
+        </div><p class="record">関西空港からFinnairで出発。到着後はBear Park Cafeでドーナツとラテを楽しみ、夕食にトナカイとビール。</p>
+        <h3>出発・機内</h3><div class="archive-postcard-grid">
+          <figure><img src="images/actual/day1/airplane1.JPG" alt="関西空港で出発を待つFinnair機" loading="lazy"><figcaption>関西空港のFinnair機</figcaption></figure>
+          <figure><img src="images/actual/day1/airplane2.JPG" alt="Finnairの機内冊子" loading="lazy"><figcaption>Finnairの機内冊子</figcaption></figure>
+          <figure><img src="images/actual/day1/airplane3.JPG" alt="機内食" loading="lazy"><figcaption>機内食</figcaption></figure>
+          <figure><img src="images/actual/day1/airplane4.JPG" alt="赤ワイン" loading="lazy"><figcaption>赤ワイン</figcaption></figure>
+          <figure><img src="images/actual/day1/airplane5.JPG" alt="Finnairのアメニティ" loading="lazy"><figcaption>Finnairのアメニティ</figcaption></figure>
+          <figure><img src="images/actual/day1/airplane6.JPG" alt="チーズカレードリア" loading="lazy"><figcaption>チーズカレードリア</figcaption></figure>
+          <figure><img src="images/actual/day1/airplane7.JPG" alt="Karl Fazerのチョコレート" loading="lazy"><figcaption>Karl Fazerのチョコレート</figcaption></figure>
+        </div>
+        <h3>ヘルシンキ到着後</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--wide"><img src="images/actual/day1/helsinki_airport.JPG" alt="ヘルシンキ空港" loading="lazy"><figcaption>ヘルシンキ空港</figcaption></figure>
+          <figure><img src="images/actual/day1/bear_park_cafe.JPG" alt="Bear Park Cafeでドーナツとラテ" loading="lazy"><figcaption>Bear Park Cafeでドーナツとラテ</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day1/Mesikämmen_muurahaispesällä.JPG" alt="ヘルシンキの公園にある彫刻" loading="lazy"><figcaption>公園の彫刻</figcaption></figure>
+        </div>
+        <h3>ホテル：Scandic Hakaniemi</h3><div class="archive-postcard-grid">
+          <figure><img src="images/actual/day1/hotel1.JPG" alt="Scandic Hakaniemiの客室" loading="lazy"><figcaption>客室</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day1/hotel2.JPG" alt="PLEASE DO NOT DISTURB「テレビのチャンネル選びで忙しいので」" loading="lazy"><figcaption>PLEASE DO NOT DISTURB「テレビのチャンネル選びで忙しいので」</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day1/hotel3.JPG" alt="PLEASE MAKE UP MY ROOM「作りたてのベッドに勝るものはない」" loading="lazy"><figcaption>PLEASE MAKE UP MY ROOM「作りたてのベッドに勝るものはない」</figcaption></figure>
+        </div>
+        <h3>夕食</h3><div class="archive-postcard-grid archive-postcard-grid--dinner">
+          <figure><img src="images/actual/day1/dinner1.JPG" alt="ビール" loading="lazy"><figcaption>ビール</figcaption></figure>
+          <figure><img src="images/actual/day1/dinner2.JPG" alt="トナカイ" loading="lazy"><figcaption>トナカイ</figcaption></figure>
+        </div>
+      </article>
+      <article class="card day-card"><p class="date">DAY 02 · 9月13日（金）</p><h3>ヘルシンキ <span class="badge">滞在</span></h3><div class="timeline">
+          <p><span class="time">朝</span> ホテルの朝食ビュッフェ</p>
+          <p><span class="time">昼</span> ヘルシンキの街を歩く</p>
+          <p><span class="time">夜</span> Scandic Hakaniemi 泊</p>
+        </div><p class="record">ホテルの朝食ビュッフェを楽しんだ記録。街を歩き、港のそばのサウナ＆プール、現代美術館、地元の小さなサウナ、ホテルのサウナを訪れた様子が投稿にある。</p>
+        <h3>朝食</h3><div class="archive-postcard-grid archive-postcard-grid--dinner">
+          <figure><img src="images/actual/day2/breakfast.JPG" alt="Scandic Hakaniemiの朝食ビュッフェ" loading="lazy"><figcaption>ホテルの朝食ビュッフェ</figcaption></figure>
+        </div>
+        <h3>街歩き</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--wide"><img src="images/actual/day2/helsinki.JPG" alt="Hakaniemi周辺の市街と市場" loading="lazy"><figcaption>Hakaniemi周辺の街並み</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day2/Hakaniemen_kauppahalli.JPG" alt="Hakaniemi Market Hall" loading="lazy"><figcaption>Hakaniemi Market Hall</figcaption></figure>
+          <figure><img src="images/actual/day2/hakaniemi_station1.JPG" alt="Hakaniemi駅の案内と地下鉄路線図" loading="lazy"><figcaption>Hakaniemi駅</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day2/hakaniemi_station2.JPG" alt="Hakaniemi地下鉄駅のホーム" loading="lazy"><figcaption>Hakaniemi駅のホーム</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day2/Havis_Amanda.JPG" alt="Havis Amandaの噴水" loading="lazy"><figcaption>Havis Amanda</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day2/Helsingin_päärautatieasema.JPG" alt="ヘルシンキ中央駅" loading="lazy"><figcaption>ヘルシンキ中央駅</figcaption></figure>
+          <figure><img src="images/actual/day2/Kappeli.JPG" alt="Kappeliレストラン" loading="lazy"><figcaption>Kappeli</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day2/Kauppatori.JPG" alt="ヘルシンキのマーケット広場" loading="lazy"><figcaption>マーケット広場（Kauppatori）</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day2/Kolmen_sepän_patsas.JPG" alt="三人の鍛冶屋像" loading="lazy"><figcaption>三人の鍛冶屋像</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day2/Nykytaiteen_museo_Kiasma.JPG" alt="キアズマ現代美術館のカラフルな展示" loading="lazy"><figcaption>キアズマ現代美術館</figcaption></figure>
+          <figure><img src="images/actual/day2/sauna_arla.JPG" alt="Arla Saunaの看板" loading="lazy"><figcaption>Arla Sauna</figcaption></figure>
+          <figure><img src="images/actual/day2/dinner.JPG" alt="夕食" loading="lazy"><figcaption>夕食</figcaption></figure>
+        </div>
+      </article>
+      <article class="card day-card"><p class="date">DAY 03 · 9月14日（土）</p><h3>ヘルシンキからロンドンへ <span class="badge">移動</span></h3><div class="timeline">
+          <p><span class="time">朝</span></p>
+          <p><span class="time">14:05 (EEST)</span> ヘルシンキ HEL 発・Finnair AY1335便</p>
+          <p><span class="time">15:10 (BST、−1h)</span> ロンドン・ヒースロー LHR 着</p>
+          <p><span class="time">夜</span> St Giles London 泊</p>
+        </div><p class="record">ヘルシンキで最後の時間を過ごし、空港でピザを昼食に、ムーミンカフェでアイスをデザートにした。Finnairでロンドンへ移動。</p>
+        <h3>ヘルシンキ</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--portrait"><img src="images/actual/day3/stockmann.JPG" alt="ヘルシンキのStockmann百貨店" loading="lazy"><figcaption>Stockmann</figcaption></figure>
+          <figure><img src="images/actual/day3/lunch.JPG" alt="空港で食べたピザ" loading="lazy"><figcaption>空港でピザの昼食</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day3/moomin_cafe.JPG" alt="ムーミンカフェとアイスクリーム" loading="lazy"><figcaption>ムーミンカフェのアイス</figcaption></figure>
+        </div>
+        <h3>ロンドンへ</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--portrait"><img src="images/actual/day3/airplane.JPG" alt="Finnair機内から見た雲と風車" loading="lazy"><figcaption>機内から見えた風車</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day3/dominion_theatre.JPG" alt="ロンドンのDominion Theatre" loading="lazy"><figcaption>ロンドン・Dominion Theatre</figcaption></figure>
+          <figure><img src="images/actual/day3/dinner.JPG" alt="ステーキとフライドポテトの夕食" loading="lazy"><figcaption>ステーキとフライドポテト</figcaption></figure>
+        </div>
+      </article>
+      <article class="card day-card"><p class="date">DAY 04 · 9月15日（日）</p><h3>ロンドン <span class="badge">街歩き</span></h3><div class="timeline">
+          <p><span class="time">朝</span></p>
+          <p><span class="time">昼</span></p>
+          <p><span class="time">夜</span> St Giles London 泊</p>
+        </div><p class="record">St Giles in the Fields周辺から街歩き。ナショナル・ギャラリー、テムズ川沿い、ウェストミンスター、バッキンガム宮殿を訪れた写真が残る。ホテルの朝食、Design Museum、Regent Streetのイベント、チャイナタウンでの食事の写真もある。St Giles LondonのWi-Fi登録完了メールがあり、ホテル滞在中の利用記録も残る。</p>
+        <h3>街歩きと食事（撮影日時順）</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--portrait"><img src="images/actual/day4/St_Giles_ in_the_Fields.JPG" alt="St Giles in the Fields教会" loading="lazy"><figcaption>St Giles in the Fields</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day4/Statue_of_Henry_Havelock.JPG" alt="Henry Havelock像" loading="lazy"><figcaption>Henry Havelock像</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day4/Nelsons_Column.JPG" alt="トラファルガー広場のネルソン記念柱" loading="lazy"><figcaption>ネルソン記念柱</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/The_National_Gallery.JPG" alt="ナショナル・ギャラリー" loading="lazy"><figcaption>ナショナル・ギャラリー</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/Golden_Jubilee_Bridges_London.JPG" alt="テムズ川とGolden Jubilee Bridges" loading="lazy"><figcaption>Golden Jubilee Bridges</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/View_from_Golden_Jubilee_Bridge_River_Thames.JPG" alt="Golden Jubilee Bridgeから見たテムズ川" loading="lazy"><figcaption>橋から見たテムズ川</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/Information_board_on_Golden_Jubilee_Bridge.JPG" alt="Golden Jubilee Bridgeの案内板" loading="lazy"><figcaption>橋の案内板</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day4/breakfast1.JPG" alt="朝食時のカフェラテ" loading="lazy"><figcaption>朝食のカフェラテ</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/breakfast2.JPG" alt="朝食のエッグベネディクト" loading="lazy"><figcaption>エッグベネディクト</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/Giraffe_Restaurant_Southbank_London.JPG" alt="SouthbankのGiraffeレストラン" loading="lazy"><figcaption>SouthbankのGiraffe</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/Hungerford_Bridge_and_Golden_Jubilee_Bridges_from_Southbank.JPG" alt="Southbankから見たHungerford BridgeとGolden Jubilee Bridges" loading="lazy"><figcaption>Southbankから見た橋</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/Palace_of_Westminster_and_Westminster_Bridge.JPG" alt="ウェストミンスター宮殿とウェストミンスター橋" loading="lazy"><figcaption>ウェストミンスター橋</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day4/The_London_Eye_and_County_Hall.JPG" alt="ロンドン・アイとCounty Hall" loading="lazy"><figcaption>ロンドン・アイ</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day4/Big_Ben_under_scaffolding.JPG" alt="修復工事中のビッグ・ベン" loading="lazy"><figcaption>工事中のビッグ・ベン</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/Henry_VII_Chapel_Westminster_Abbey.JPG" alt="ウェストミンスター寺院のHenry VII礼拝堂" loading="lazy"><figcaption>ウェストミンスター寺院</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/Buckingham_Palace_and_Victoria_Memorial.JPG" alt="衛兵交代式の人々とバッキンガム宮殿" loading="lazy"><figcaption>バッキンガム宮殿と衛兵交代式</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day4/Victoria_Memorial_and_Buckingham_Palace.JPG" alt="ヴィクトリア記念碑とバッキンガム宮殿" loading="lazy"><figcaption>ヴィクトリア記念碑</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day4/ice_cream.JPG" alt="アイスクリーム" loading="lazy"><figcaption>アイスクリーム</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/The_Design_Museum_London.JPG" alt="ロンドンのDesign Museum" loading="lazy"><figcaption>Design Museum</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/lunch.JPG" alt="昼食のフィッシュアンドチップス" loading="lazy"><figcaption>フィッシュアンドチップス</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/Regent_Street_Event_London.JPG" alt="Regent Streetのイベント" loading="lazy"><figcaption>Regent Streetのイベント</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day4/Chinatown_London.JPG" alt="ロンドンのチャイナタウン" loading="lazy"><figcaption>チャイナタウン</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/dinner1.JPG" alt="夕食の春巻き" loading="lazy"><figcaption>夕食</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day4/dinner2.JPG" alt="夕食の肉料理とご飯" loading="lazy"><figcaption>夕食</figcaption></figure>
+        </div>
+      </article>
+      <article class="card day-card"><p class="date">DAY 05 · 9月16日（月）</p><h3>ロンドンからバルセロナへ <span class="badge">移動</span></h3><div class="timeline">
+          <p><span class="time">朝</span></p>
+          <p><span class="time">昼</span></p>
+          <p><span class="time">16:40 (BST)</span> ロンドン・ヒースロー T3 発・British Airways BA486便</p>
+          <p><span class="time">19:50 (CEST、+1h)</span> バルセロナ BCN T1 着</p>
+          <p><span class="time">20:40 (CEST)</span> Welcome Pickupsという送迎サービスでホテルへ</p>
+          <p><span class="time">夜</span> Aparthotel Atenea Calabria 泊</p>
+        </div><p class="record">朝食後、大英博物館を見学。昼食後、ヒースロー・エクスプレスで空港へ向かい、BA486便でバルセロナへ移動した。Welcome Pickupsという送迎サービスでホテルへ。</p>
+        <h3>ホテルと朝食</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--portrait"><img src="images/actual/day5/hand_hair_body_wash.JPG" alt="ホテルのハンド・ヘア・ボディウォッシュ" loading="lazy"><figcaption>ホテルのアメニティ</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day5/hotel_room.JPG" alt="St Giles Londonの客室" loading="lazy"><figcaption>St Giles Londonの客室</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day5/breakfast1.JPG" alt="朝食をとった店から見たロンドンの街並み" loading="lazy"><figcaption>朝食の店から見た街並み</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day5/breakfast2.JPG" alt="朝食時のコーヒー" loading="lazy"><figcaption>コーヒー</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day5/breakfast3.JPG" alt="ソーセージや卵などの朝食" loading="lazy"><figcaption>イングリッシュ・ブレックファスト</figcaption></figure>
+        </div>
+        <h3>大英博物館と街歩き</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--portrait"><img src="images/actual/day5/ice_cream.JPG" alt="アイスクリーム" loading="lazy"><figcaption>アイスクリーム</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day5/the_british_museum1.JPG" alt="大英博物館の展示案内" loading="lazy"><figcaption>大英博物館の案内</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day5/the_british_museum2.JPG" alt="大英博物館の正面" loading="lazy"><figcaption>大英博物館</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day5/the_british_museum3.JPG" alt="大英博物館のグレート・コート" loading="lazy"><figcaption>グレート・コート</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day5/the_british_museum4.JPG" alt="大英博物館の石彫展示" loading="lazy"><figcaption>石彫の展示</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day5/the_british_museum5.JPG" alt="大英博物館の彫像展示" loading="lazy"><figcaption>彫像の展示</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day5/the_british_museum6.JPG" alt="大英博物館の展示室" loading="lazy"><figcaption>展示室</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day5/lunch.JPG" alt="昼食のハンバーガーとフライドポテト" loading="lazy"><figcaption>昼食</figcaption></figure>
+        </div>
+        <h3>空港へ</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--portrait"><img src="images/actual/day5/heathrow_express.JPG" alt="ヒースロー・エクスプレス" loading="lazy"><figcaption>ヒースロー・エクスプレス</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day5/british_airways.JPG" alt="T3のBritish Airways" loading="lazy"><figcaption>T3のBritish Airways</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day5/puddinton_bear.JPG" alt="パディントン・ベアのぬいぐるみ" loading="lazy"><figcaption>パディントン・ベア</figcaption></figure>
+        </div>
+      </article>
+      <article class="card day-card"><p class="date">DAY 06 · 9月17日（火）</p><h3>バルセロナ <span class="badge">街歩き</span></h3><div class="timeline">
+          <p><span class="time">朝</span></p>
+          <p><span class="time">昼</span></p>
+          <p><span class="time">夜</span> Aparthotel Atenea Calabria 泊</p>
+        </div><p class="record">宿泊先の客室と朝食、Casa Milà、Mercadona、昼食、ピカソ美術館、海辺の写真が残る。Hola Barcelonaの交通関連商品の購入確認がある（商品内容・利用実績は未確認）。サグラダ・ファミリアは当初の予約枠が確定できず、Headoutから9月18日15:30への変更または返金を提案され、15:30への変更を希望した。</p>
+        <h3>街歩きと食事（撮影日時順）</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--portrait"><img src="images/actual/day6/hotel1.JPG" alt="ホテルのアメニティボトル" loading="lazy"><figcaption>ホテルのアメニティ</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day6/hotel2.JPG" alt="宿泊先の客室内設備" loading="lazy"><figcaption>客室</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day6/hotel3.JPG" alt="宿泊先のベッドと客室" loading="lazy"><figcaption>客室</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day6/breakfast.JPG" alt="朝食のトーストと卵料理" loading="lazy"><figcaption>朝食</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day6/Casa_Mila.JPG" alt="バルセロナのCasa Milà" loading="lazy"><figcaption>Casa Milà</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day6/mercadona.JPG" alt="バルセロナのスーパーマーケットMercadona" loading="lazy"><figcaption>Mercadona</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day6/lunch1.JPG" alt="昼食のソーセージ料理" loading="lazy"><figcaption>昼食</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day6/lunch2.JPG" alt="昼食の揚げ物" loading="lazy"><figcaption>昼食</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day6/lunch3.JPG" alt="昼食時のミネラルウォーター" loading="lazy"><figcaption>ミネラルウォーター</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day6/Picasso_Museum1.JPG" alt="ピカソ美術館の建物と案内" loading="lazy"><figcaption>ピカソ美術館</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day6/Picasso_Museum2.JPG" alt="ピカソ美術館の展示室" loading="lazy"><figcaption>館内</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day6/dessert.JPG" alt="コーヒーとケーキのデザート" loading="lazy"><figcaption>デザート</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day6/Barceloneta_Beach.JPG" alt="バルセロネータの海岸" loading="lazy"><figcaption>Barceloneta Beach</figcaption></figure>
+        </div>
+      </article>
+      <article class="card day-card"><p class="date">DAY 07 · 9月18日（水）</p><h3>サグラダ・ファミリア <span class="badge">訪問記録あり</span></h3><div class="timeline">
+          <p><span class="time">朝</span></p>
+          <p><span class="time">昼</span></p>
+          <p><span class="time">15:30 (CEST)</span> サグラダ・ファミリア見学</p>
+          <p><span class="time">夜</span> Aparthotel Atenea Calabria 泊</p>
+        </div><p class="record">外観や内部のステンドグラスを撮影。写真と旅行中の投稿から訪問したことが分かる。サグラダ・ファミリアの予約はHeadoutというサービスで行った。</p>
+        <h3>街歩きと食事（撮影日時順）</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--wide"><img src="images/actual/day7/Placa_d_Espanya.JPG" alt="バルセロナのスペイン広場" loading="lazy"><figcaption>スペイン広場（Plaça d'Espanya）</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day7/breakfast.JPG" alt="朝食とコーヒー" loading="lazy"><figcaption>朝食</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day7/lunch1.JPG" alt="昼食時のメニューと飲み物" loading="lazy"><figcaption>昼食のメニュー</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day7/lunch2.JPG" alt="ハンバーガーとポテトの昼食" loading="lazy"><figcaption>昼食</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day7/Basílica_de_la_Sagrada_Família1.JPG" alt="サグラダ・ファミリアの外観" loading="lazy"><figcaption>サグラダ・ファミリアの外観</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day7/Basílica_de_la_Sagrada_Família2.JPG" alt="サグラダ・ファミリアの彫刻" loading="lazy"><figcaption>外壁の彫刻</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day7/Basílica_de_la_Sagrada_Família3.JPG" alt="サグラダ・ファミリア内部のステンドグラス" loading="lazy"><figcaption>ステンドグラス</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day7/Basílica_de_la_Sagrada_Família4.JPG" alt="色鮮やかな光が差し込むサグラダ・ファミリア内部" loading="lazy"><figcaption>光に満ちた内部</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day7/strawberry_orange_juice.JPG" alt="いちごとオレンジジュース" loading="lazy"><figcaption>いちごとオレンジジュース</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day7/dinner1.JPG" alt="夕食時の飲み物とケーキ" loading="lazy"><figcaption>夕食時の飲み物とケーキ</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day7/dinner2.JPG" alt="タコ料理" loading="lazy"><figcaption>タコ料理</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day7/dinner3.JPG" alt="シーフードパエリア" loading="lazy"><figcaption>シーフードパエリア</figcaption></figure>
+        </div>
+      </article>
+      <article class="card day-card"><p class="date">DAY 08 · 9月19日（木）</p><h3>シッチェスへ小旅行 <span class="badge">小旅行</span></h3><div class="timeline">
+          <p><span class="time">朝</span> バルセロナから国鉄でシッチェスへ</p>
+          <p><span class="time">昼</span> 海辺と街を散策</p>
+          <p><span class="time">夜</span> バルセロナで夕食</p>
+          <p><span class="time">夜</span> Aparthotel Atenea Calabria 泊</p>
+        </div><p class="record">旅行中の投稿にあった「国鉄に乗ってビーチへ」という予定に沿って、写真に写る駅名・街並み・海辺からシッチェスを訪れた記録として整理。</p>
+        <h3>シッチェスへの往復と街歩き</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--wide"><img src="images/actual/day8/breakfast.JPG" alt="サンドイッチとカプチーノの朝食" loading="lazy"><figcaption>出発前の朝食</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day8/Barcelona_Sants_Station.JPG" alt="バルセロナ・サンツ駅" loading="lazy"><figcaption>Barcelona-Sants駅</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day8/Renfe_Train.JPG" alt="駅に停車するRenfeの列車" loading="lazy"><figcaption>シッチェスへ向かう列車</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day8/Sitges_Town_Street.JPG" alt="シッチェスの街角" loading="lazy"><figcaption>シッチェスの街角</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day8/Madrigal_a_Sitges_Tile_Monument.JPG" alt="詩と街の絵が描かれたシッチェスのタイル壁画" loading="lazy"><figcaption>「Madrigal a Sitges」のタイル壁画</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day8/Platja_dels_Balmins_Sitges.JPG" alt="シッチェスのPlatja dels Balminsと海岸の眺め" loading="lazy"><figcaption>Platja dels Balmins</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day8/sitges_express.JPG" alt="シッチェス・エクスプレスの時刻表と案内" loading="lazy"><figcaption>シッチェスの観光列車案内</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day8/lunch.JPG" alt="トマトときゅうりを添えたビリヤニ" loading="lazy"><figcaption>昼食</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day8/dinner.JPG" alt="バルセロナでの夕食" loading="lazy"><figcaption>夕食</figcaption></figure>
+        </div>
+      </article>
+      <article class="card day-card"><p class="date">DAY 09 · 9月20日（金）</p><h3>バルセロナからドーハへ <span class="badge">予定変更</span></h3><div class="timeline">
+          <p><span class="time">06:00 (CEST)</span> Welcome Pickupsという送迎サービスでホテルから空港へ</p>
+          <p><span class="time">08:50 (CEST)</span> バルセロナ BCN 発・Qatar Airways QR138便</p>
+          <p><span class="time">昼</span></p>
+          <p><span class="time">15:55 (AST、+1h)</span> ドーハ DOH 着</p>
+          <p><span class="time">夜</span> Concorde Hotel Dohaに宿泊</p>
+        </div><p class="record">当初はストップオーバーとして航空会社が宿を手配すると考えていたが、ストップオーバー扱いにならず、自分で宿を予約した。宿泊先はConcorde Hotel Doha。</p>
+        <h3>空港・機内・ドーハの宿</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--wide"><img src="images/actual/day9/airport.JPG" alt="バルセロナ空港の出発ロビー" loading="lazy"><figcaption>バルセロナ空港</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day9/airplane1.JPG" alt="機内食と飲み物のメニュー" loading="lazy"><figcaption>Qatar Airwaysの機内メニュー</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day9/airplane2.JPG" alt="機内で提供された軽食と飲み物" loading="lazy"><figcaption>機内の軽食</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day9/airplane3.JPG" alt="Qatar Airwaysのハリッサチキン・アラビックペストリー" loading="lazy"><figcaption>ハリッサチキンのアラビックペストリー</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day9/hotel1.JPG" alt="Concorde Hotel Dohaの客室" loading="lazy"><figcaption>Concorde Hotel Dohaの客室</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day9/hotel2.JPG" alt="夜に撮影したConcorde Hotel Dohaの外観" loading="lazy"><figcaption>夜のConcorde Hotel Doha</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day9/dinner1.JPG" alt="Concorde Hotel Dohaでの夕食。ライスとカレー" loading="lazy"><figcaption>ホテルでの夕食</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day9/dinner2.JPG" alt="Concorde Hotel Dohaでの夕食。サラダと前菜" loading="lazy"><figcaption>夕食の前菜</figcaption></figure>
+        </div>
+      </article>
+      <article class="card day-card"><p class="date">DAY 10 · 9月21日（土）</p><h3>ドーハからバンコクへ <span class="badge">移動</span></h3><div class="timeline">
+          <p><span class="time">朝</span> ドーハ空港へ</p>
+          <p><span class="time">08:35 (AST)</span> ドーハ DOH 発・Qatar Airways QR838便</p>
+          <p><span class="time">昼</span> 機内</p>
+          <p><span class="time">19:20 (ICT、+4h)</span> バンコク BKK 着</p>
+          <p><span class="time">夜</span> 空港で夕食を取り、深夜便まで時間をつぶした。</p>
+          <p><span class="time">9/21 23:30 (ICT)</span> バンコク BKK 発・JAL JL728便</p>
+        </div><p class="record">QR838便でバンコクへ。到着後、空港内で夕食を取り、深夜便まで時間をつぶした</p>
+        <h3>ドーハ空港から機内へ</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--wide"><img src="images/actual/day10/doha_airport1.JPG" alt="ドーハ空港の出発・チェックイン案内" loading="lazy"><figcaption>ドーハ空港</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day10/doha_airport2.JPG" alt="ドーハ空港のランプベア" loading="lazy"><figcaption>ドーハ空港のランプベア</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day10/airplane1.JPG" alt="Qatar Airways機へタラップから搭乗" loading="lazy"><figcaption>QR838便へ搭乗</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day10/airplane2.JPG" alt="Qatar Airwaysの朝食メニュー" loading="lazy"><figcaption>機内の朝食メニュー</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day10/airplane3.JPG" alt="機内で提供された麺料理とフルーツ" loading="lazy"><figcaption>機内食</figcaption></figure>
+          <figure class="archive-postcard--portrait"><img src="images/actual/day10/airplane4.JPG" alt="照り焼きチキンのアラビックペストリー" loading="lazy"><figcaption>照り焼きチキンの軽食</figcaption></figure>
+        </div>
+        <h3>バンコク到着後の夕食</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--portrait"><img src="images/actual/day10/dinner1.JPG" alt="バンコク到着後の飲み物" loading="lazy"><figcaption>夕食時の飲み物</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day10/dinner2.JPG" alt="青菜炒め" loading="lazy"><figcaption>青菜炒め</figcaption></figure>
+          <figure class="archive-postcard--wide"><img src="images/actual/day10/dinner3.JPG" alt="ご飯と肉料理の夕食" loading="lazy"><figcaption>夕食</figcaption></figure>
+        </div>
+      </article>
+      <article class="card day-card"><p class="date">DAY 11 · 9月22日（日）</p><h3>バンコクから関西、神戸へ <span class="badge">帰国</span></h3><div class="timeline">
+          <p><span class="time">機内</span> 食事</p>
+          <p><span class="time">9/22 07:05 (JST、+2h)</span> 関西 KIX 着</p>
+          <p><span class="time">07:30頃 (JST)</span> MKスカイゲイトシャトルで関西空港発</p>
+          <p><span class="time">09:00頃 (JST)</span> 神戸に到着</p>
+        </div><p class="record">JL728便で関西空港に到着。空港から自宅までの送迎予約が記録されている。</p>
+        <h3>帰国便の機内食</h3><div class="archive-postcard-grid">
+          <figure class="archive-postcard--wide"><img src="images/actual/day11/airplane.JPG" alt="JAL JL728便で提供された機内食" loading="lazy"><figcaption>関西へ向かうJL728便の機内食</figcaption></figure>
+        </div>
+      </article>
+    </section>
+    <section id="todo" class="card"><h2>旅の記録を補う</h2>
+      <div class="checks"><div class="check">ドーハの宿を自分で手配した経緯</div><div class="check">サグラダ・ファミリアの実際の入場時刻・チケット詳細</div><div class="check">写真を撮影日時順に並べ、各日の代表写真を選ぶ</div><div class="check">各都市で訪れた観光地、飲食店、買い物先</div><div class="check">ホテルの感想と、宿泊施設の写真</div><div class="check">旅行前のラジオ投稿・放送をプロローグとして追記</div></div>
+    </section>
+    <section class="card"><h2>記録について</h2><p class="sources">このページは「2019-europe-travel-actual.md」、「2019-europe-travel-emails.md」、JALの電子航空券旅程表をもとに構成。Googleカレンダー、航空会社・宿泊施設・送迎会社等のメール、旅行中の投稿を情報源とする。予約・予定は実際の搭乗、訪問、宿泊の完了を常に保証するものではない。タイムゾーン略号と時差は2019年9月時点を調べ、時差は各便の出発地を基準に到着地との差を表記。日付またぎの便は航空会社メールの日付を優先。</p></section>
+  </main>
+  <footer><p><a href="../../index.html">← Travel Logへ戻る</a></p></footer>
+  <dialog class="photo-lightbox" aria-label="写真の拡大表示">
+    <div class="photo-lightbox-content">
+      <button class="photo-lightbox-close" type="button" aria-label="閉じる">×</button>
+      <img alt="">
+      <p class="photo-lightbox-caption"></p>
+    </div>
+  </dialog>
+  <script>
+    (() => {
+      const dialog = document.querySelector('.photo-lightbox');
+      const enlargedImage = dialog.querySelector('img');
+      const caption = dialog.querySelector('.photo-lightbox-caption');
+      const closeButton = dialog.querySelector('.photo-lightbox-close');
+      const photos = document.querySelectorAll('.archive-postcard-grid img, .place-photo');
+
+      const openPhoto = (photo) => {
+        enlargedImage.src = photo.currentSrc || photo.src;
+        enlargedImage.alt = photo.alt || '拡大写真';
+        caption.textContent = photo.closest('figure')?.querySelector('figcaption')?.textContent || photo.alt || '';
+        dialog.showModal();
+      };
+
+      photos.forEach((photo) => {
+        photo.tabIndex = 0;
+        photo.setAttribute('role', 'button');
+        photo.setAttribute('aria-label', `${photo.alt || '写真'}を拡大表示`);
+        photo.addEventListener('click', () => openPhoto(photo));
+        photo.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            openPhoto(photo);
+          }
+        });
+      });
+
+      closeButton.addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+      dialog.addEventListener('close', () => {
+        enlargedImage.removeAttribute('src');
+        caption.textContent = '';
+      });
+    })();
+  </script>
+</body>
+</html>
+
